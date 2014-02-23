@@ -63,6 +63,8 @@ app.use( function( req, res, next ) {
 
     // used for determining current path in EJS files
     res.locals.path = req.path;
+    res.locals.menu = commons.menu;
+    res.locals.is_remote = commons.quiz_mode == 'remote';
 
     res.locals.quiz_name = commons.quiz_name;
     res.locals.mega_event = commons.mega_event;
@@ -109,7 +111,7 @@ else if( commons.quiz_mode == 'remote' ) {
 }
 
 
-app.get( '/logout_process', user.logout_process );
+app.get( '/logout', user.logout_process );
 app.post( '/login', user.login_process );
 
 app.get( '/help', help.show_page );

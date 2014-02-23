@@ -12,7 +12,30 @@ commons.quiz_type = 'wizard';
  * local -  no email will not be asked for or dealt with..
  *          ..ideal for contests run in LAN with physical presence of participants
  */
-commons.quiz_mode = 'remote';
+commons.quiz_mode = 'local';
+
+commons.menu = [
+    { label: 'Login', glyph: 'log-in', path: '/',
+        show: { logged_in: false, logged_out: true, remote: true, local: true } },
+
+    { label: 'Register', glyph: 'user', path: '/register',
+        show: { logged_in: false, logged_out: true, remote: true, local: false } },
+
+    { label: 'Forgot Password', glyph: 'info-sign', path: '/forgot_password',
+        show: { logged_in: false, logged_out: true, remote: true, local: false } },
+
+    { label: 'Play', glyph: 'play', path: '/start',
+        show: { logged_in: true, logged_out: false, remote: true, local: true } },
+
+    { label: 'Log Out', glyph: 'log-out', path: '/logout',
+        show: { logged_in: true, logged_out: false, remote: true, local: true } },
+
+    { label: 'Scoreboard', glyph: 'list-alt', path: '/scoreboard',
+        show: { logged_in: true, logged_out: true, remote: true, local: true } },
+
+    { label: 'Help', glyph: 'question-sign', path: '/help',
+        show: { logged_in: true, logged_out: true, remote: true, local: true } }
+];
 
 commons.quiz_duration = 10; // in minutes
 // year, month = 0 for jan and 11 for dec, day, hours, minutes, seconds
