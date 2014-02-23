@@ -67,7 +67,7 @@ app.use( function( req, res, next ) {
     res.locals.quiz_name = commons.quiz_name;
     res.locals.mega_event = commons.mega_event;
     res.locals.quiz_type = commons.quiz_type;
-    res.locals.ends_in = typeof req.session.sa == 'undefined' ? null : commons.get_quiz_end_time_relative( req.session.sa );
+    res.locals.ends_in = (typeof req.session.sa == 'undefined' || !req.session.sa ) ? 0 : commons.get_quiz_end_time_relative( req.session.sa );
     res.locals.start_link = !req.session.sa ? '/start' : '/questions';
 
     // session persisted messages
