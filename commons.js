@@ -1,0 +1,96 @@
+var commons = {};
+
+/**
+ * wizard - 1st question to last question wizard-like interface
+ * classic - dashboard with status for all the questions
+ */
+commons.quiz_type = 'wizard';
+
+/**
+ * remote - email will be asked for...
+ *          ..ideal for contests over the internet
+ * local -  no email will not be asked for or dealt with..
+ *          ..ideal for contests run in LAN with physical presence of participants
+ */
+commons.quiz_mode = 'remote';
+
+commons.quiz_duration = 10; // in minutes
+// year, month = 0 for jan and 11 for dec, day, hours, minutes, seconds
+commons.quiz_starts_at = new Date( 2014, 1 , 15, 12 ).getTime();
+
+commons.admin_user = 'CT7001';
+commons.quiz_name = 'QuizApp';
+commons.quiz_prefix = 'CT';
+commons.user_id_offset = 1000;
+commons.mega_event = 'QuizEvent';
+
+commons.cookie_secret = 'your secret should go here';
+
+commons.smtp_host = '';
+commons.smtp_username = '';
+commons.smtp_password = '';
+commons.email_from_string = '';
+
+commons.mongodb_uri = 'mongodb://root@localhost/quizapp';
+commons.should_send_email = commons.quiz_mode == 'remote';
+
+commons.get_registration_email_text = function( name, user_id, password ) {
+    return "Hi " + name +",\n\
+\n\
+Thank you for registering for QuizApp.\n\
+\n\
+You can login with the following details:\n\
+\n\
+User ID: " + user_id + "\n\
+Password : " + password + "\n\
+\n\
+For more information, contact us at:\n\
+\n\
+John Doe: +1-800-800\n\
+\n\
+Regards,\n\
+QuizApp Team.";
+
+}
+
+commons.get_forgot_password_email_text = function( name, user_id, password ) {
+    return "Hi " + name +",\n\
+\n\
+You had just filled up the form to reset your password and receive it in your email.\n\
+\n\
+You can login with the following details:\n\
+\n\
+User ID: " + user_id + "\n\
+Password : " + password + "\n\
+For more information, contact us at:\n\
+\n\
+John Doe: +1-800-800\n\
+\n\
+Regards,\n\
+QuizApp Team.";
+}
+
+commons.flash_and_redirect = function( alert_type, alert_message, redirect_to, res, req ){
+    req.session.alert = { type: alert_type, message: alert_message };
+    return res.redirect( redirect_to );
+}
+
+commons.get_quiz_end_time = function( started_at ){
+    return started_at != null ? new Date( started_at ).getTime() + ( commons.quiz_duration * 60000 ) : 0;
+}
+
+commons.get_quiz_end_time_relative = function( started_at ){
+    return started_at != null ? ( new Date( started_at ).getTime() + ( commons.quiz_duration * 60000 ) - new Date().getTime() ) : 0;
+}
+
+commons.is_under_time_limit = function( started_at ) {
+    var ends_at = commons.get_quiz_end_time( started_at );
+    if( ends_at > new Date().getTime() ) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+module.exports = commons;

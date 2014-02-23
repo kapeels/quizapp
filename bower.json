@@ -1,0 +1,10 @@
+{
+    "name":"quizapp",
+    "version":"0.0.1",
+    "dependencies":{
+        "bootstrap":"3.0.3",
+        "angular":"1.2.10",
+        "underscore":"latest",
+        "jquery.countdown":"latest"
+    }
+}

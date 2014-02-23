@@ -1,0 +1,59 @@
+<% include common/header %>
+    <div class="page-header">
+      <h1>Register for <%- quiz_name %></h1>
+    </div>
+    <div class="row-fluid">
+        <div class="col-md-7 col-md-offset-3">
+            <form class="form-horizontal well" role="form" id="reg_form" action="/register" method="post">
+              <div class="form-group">
+                <label for="name" class="col-sm-2 control-label">*Name </label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
+                    <p class="help-block">This name will be printed on the online participation certificate.</p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="college" class="col-sm-2 control-label">*College </label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" name="college" id="college" placeholder="Your college name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="phone" class="col-sm-2 control-label">*Phone </label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="phone" name="phone" placeholder="Your mobile number">
+                </div>
+              </div>
+
+              <%
+              if( enable_email ) {
+                %>
+                <div class="form-group">
+                    <label for="email" class="col-sm-2 control-label">*Email </label>
+                    <div class="col-sm-10">
+                      <input type="email" class="form-control" id="email" name="email" placeholder="Your Email">
+                      <p class="help-block">Your <%- mega_event %> ID and password will be sent to this email address.</p>
+                    </div>
+                  </div>
+                <%
+              }
+              %>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-send"></span> Register</button>
+                </div>
+              </div>
+            </form>
+        </div>
+    </div>
+    <style type="text/css">
+    label.control-label {
+        text-align: right !important;
+    }
+    </style>
+    <script type="text/javascript">
+        jQuery( document ).ready( function(){
+            $( "#name" ).focus();
+        });
+    </script>
+<% include common/footer %>

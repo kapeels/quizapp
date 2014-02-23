@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="shortcut icon" href="/favicon.png">-->
+    <title><%= title %></title>
+    <!-- Bootstrap core CSS -->
+    <link href="/components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="/stylesheets/sticky-footer-navbar.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="/javascript/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/javascripts/html5shiv.js"></script>
+      <script src="/javascripts/respond.min.js"></script>
+    <![endif]-->
+    <script src="/components/jquery/dist/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Wrap all page content here -->
+    <div id="wrap">
+      <!-- Fixed navbar -->
+      <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><%- quiz_name %></a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <%
+               if( !logged_in ) {
+                %>
+                <li <%- path == '/' ? 'class="active"' : ''  %>>
+                    <a href="/"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+                </li>
+                <li <%- path == '/register' ? 'class="active"' : ''  %>>
+                    <a href="/register"><span class="glyphicon glyphicon-user"></span> Register</a>
+                </li>
+                <li <%- path == '/forgot_password' ? 'class="active"' : ''  %>>
+                    <a href="/forgot_password"><span class="glyphicon glyphicon-info-sign"></span> Forgot Password</a>
+                </li>
+                <%
+               }
+               else {
+               %>
+               <li <%- path == '/questions' ? 'class="active"' : ''  %>>
+                    <a href="<%- start_link %>"><span class="glyphicon glyphicon-play"></span> Play!</a>
+               </li>
+               <li><a href="/logout_process"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+               <%
+               }
+              %>
+                <li <%- path == '/scoreboard' ? 'class="active"' : ''  %>>
+                    <a href="/scoreboard"><span class="glyphicon glyphicon-list-alt"></span> Scoreboard</a>
+                </li>
+                <li <%- path == '/help' ? 'class="active"' : ''  %>><a href="/help"> <span class="glyphicon glyphicon-question-sign"></span> Help</a></li>
+                <li style="margin-top: 15px;"><div class="fb-like" data-href="https://www.facebook.com/catalystRGCER" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></li>
+            </ul>
+            <%
+            if( logged_in ) {
+            %>
+            <ul class="nav navbar-nav" style="float:right;">
+                <li><a>Time Remaining: <strong class="text-warning" id="time_left"></strong></a></li>
+            </ul>
+            <%
+            }
+            %>
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+      <!-- Begin page content -->
+      <div class="container">
+        <div class="row-fluid">
+          <div class="col-md-10">
+              <%
+              if( typeof alert != 'undefined' ) {
+                %>
+                    <div class="row-fluid">
+                      <div class="col-md-12">
+                          <div class="alert alert-<%= alert.type %> alert-dismissable" style="margin-bottom: 0px;">
+                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                              <%- alert.message %>
+                          </div>
+                      </div>
+                    </div>
+                <%
+              }
+              %>
+              <div class="row-fluid">
+                <div class="col-md-12">

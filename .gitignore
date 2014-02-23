@@ -1,0 +1,10 @@
+.idea
+.DS_Store
+public/components
+node_modules
+pids
+logs
+results
+build
+.grunt
+cli/csv/*

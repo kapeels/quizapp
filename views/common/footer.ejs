@@ -1,0 +1,30 @@
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h3 class="text-center">Sponsors</h3><br /><br />
+                    <a href="#" target="_blank">
+                        <img src="http://placehold.it/200x150" width="200" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+      <div class="container">
+        <p class="text-muted">&copy; <%- quiz_name %>.</p>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/components/jquery.countdown/dist/jquery.countdown.min.js"></script>
+    <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $( document ).ready( function() {
+            $('#time_left').countdown( new Date().getTime() + <%- ends_in %>, function(event) {
+                $(this).html(event.strftime('%H:%M:%S'));
+            } );
+        });
+    </script>
+  </body>
+</html>

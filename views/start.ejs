@@ -1,0 +1,25 @@
+<% include common/header %>
+<div class="row-fluid">
+    <div class="col-md-12">
+        <div class="page-header" style="margin-top: 20px;">
+          <h3>Welcome <%- name %>!</h3>
+        </div>
+        <p class="lead">
+            <strong>Instructions:</strong><br />
+            1. Your instructions should go here.<br />
+            2. Instructions for participants should be like:
+            3. What the quiz duration is.<br />
+            4. What are the questions like.<br />
+            5. How questions are scored.
+        </p>
+        <form action="/start" method="post">
+            <button class="btn btn-primary" href="/start"><span class="glyphicon glyphicon-send"></span> Start</button>
+        </form>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="col-md-6 col-md-offset-3">
+
+    </div>
+</div>
+<% include common/footer %>

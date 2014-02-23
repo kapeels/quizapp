@@ -1,0 +1,62 @@
+<% include common/header %>
+<div class="row">
+    <div class="page-header col-md-12">
+        <div class="row-fluid">
+            <h4 class="col-md-6">Your Score: <strong class="text-info"><%= score %> points</strong></h3>
+            <h4 class="col-md-6" style="text-align:right;">Last Submission: <strong class="text-success"><%= last_submission %></strong></h3>
+        </div>
+    </div>
+</div>
+<%
+if( !can_solve ) {
+%>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <div class="alert alert-warning">
+            Your time is over.
+        </div>
+    </div>
+</div>
+<%
+}
+%>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th style="width:10%">#</th>
+                    <th style="width:70%"><span class="glyphicon glyphicon-time"></span> Completed</th>
+                    <th style="width:20%"><span class="glyphicon glyphicon-th"></span> Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i=0; i<questions.length; i++) {%>
+                    <tr>
+                        <td><%= i+1 %></td>
+                        <td><%= questions[ i ].completed_at %></td>
+                        <%
+                        if( questions[ i ].complete ) {
+                            %>
+                            <td><a href="#" onclick="return false;" class="btn btn-success btn-mini disabled"><span class="glyphicon glyphicon-ok-sign"></span> Correct</a></td>
+                            <%
+                        }
+                        else if( questions[ i ].attempted && !questions[ i ].multiple_responses ) {
+                            %>
+                            <td><a href="#" onclick="return false;" class="btn btn-danger btn-mini disabled"><span class="glyphicon glyphicon-remove-sign"></span> Incorrect</a></td>
+                            <%
+                        }
+                        else {
+                            %>
+                            <td><a href="/questions/<%= i+1 %>" class="btn btn-primary btn-mini <%= !can_solve ? 'disabled' : '' %>"><span class="glyphicon glyphicon-plane"></span> Solve</a></td>
+                            <%
+                        }
+                        %>
+                    </tr>
+                <% } %>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+<% include common/footer %>
