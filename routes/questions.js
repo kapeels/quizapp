@@ -137,7 +137,7 @@ exports.validate_answer = function( req, res ) {
     }
 
     if( !answer ) {
-        console.log( "Empty answer yo" );
+        //console.log( "Empty answer yo" );
         return commons.flash_and_redirect( 'danger', 'Please type an answer before submitting.', '/questions/' + question_id, res, req );
     }
 
