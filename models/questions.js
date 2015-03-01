@@ -42,7 +42,7 @@ questions.push( {
     correct_points: 10,
     incorrect_points: 0,
     multiple_responses: true,
-    answer: 'kabbadi',
+    answer: 'kabaddi',
     additional_text: ''
 } );
 
