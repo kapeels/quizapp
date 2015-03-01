@@ -39,10 +39,10 @@ commons.menu = [
 
 commons.quiz_duration = 60; // in minutes
 // year, month = 0 for jan and 11 for dec, day, hours, minutes, seconds
-commons.quiz_starts_at = new Date( 2015, 2 , 1, 13 ).getTime();
-//commons.quiz_starts_at = new Date( 2015, 1 , 26, 11 ).getTime();
+//commons.quiz_starts_at = new Date( 2015, 2 , 1, 13 ).getTime();
+commons.quiz_starts_at = new Date( 2015, 1 , 26, 11 ).getTime();
 
-commons.admin_user = 'CT3001';
+commons.admin_user = 'CT1001';
 commons.quiz_name = 'WebDig';
 commons.quiz_prefix = 'CT';
 commons.user_id_offset = 1000;

@@ -161,6 +161,61 @@ questions.push( {
     answer: 'gnip',
     additional_text: ''
 } );
+
+questions.push( {
+    question_no: 11,
+    type: 1,
+    statement: 'A a computer language developed in 1973 at AT&T Bell Labs. In which year, did one of the founder of this language receive the Turing Award?',
+    correct_points: 10,
+    incorrect_points: 0,
+    multiple_responses: true,
+    answer: '1983',
+    additional_text: ''
+} );
+
+questions.push( {
+    question_no: 12,
+    type: 1,
+    statement: 'An actor made his bollywood debut in 1992 with a film in which he played a role of a man with some disorder/syndrome willing to meet the president of USA. This disorder/syndrome is named after a person. What is the last name/surname of this person?',
+    correct_points: 10,
+    incorrect_points: 0,
+    multiple_responses: true,
+    answer: 'asperger',
+    additional_text: ''
+} );
+
+questions.push( {
+    question_no: 13,
+    type: 1,
+    statement: 'One of the five co-founders of Facebook, initiated legal actions against Mark Zuckerberg. A Hollywood movie was made to depict this realtion between Zuckerberg and this person. What is the first name of the actor who played the role of this other co-founder?',
+    correct_points: 10,
+    incorrect_points: 0,
+    multiple_responses: true,
+    answer: 'andrew',
+    additional_text: ''
+} );
+
+questions.push( {
+    question_no: 14,
+    type: 1,
+    statement: 'An organisation publishes secret information, news leaks, and classified media from anonymous sources. What is the online nick name under which the founder of this organization started hacking activities?',
+    correct_points: 10,
+    incorrect_points: 0,
+    multiple_responses: true,
+    answer: 'mendax',
+    additional_text: ''
+} );
+
+questions.push( {
+    question_no: 15,
+    type: 1,
+    statement: 'In about 260 BCE Asoka waged a bitterly destructive war against a state. It is said that a river turned into red with the blood of the slain. What is the last name of the current chief minister of this state from where the river flows?',
+    correct_points: 10,
+    incorrect_points: 0,
+    multiple_responses: true,
+    answer: 'patnaik',
+    additional_text: ''
+} );
 /*
 questions.push( {
     question_no: 2,
