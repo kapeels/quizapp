@@ -234,7 +234,7 @@ exports.start_page = function( req, res ) {
 exports.start_quiz = function( req, res ) {
 
     if( new Date().getTime() < commons.quiz_starts_at ) {
-        return commons.flash_and_redirect( 'info', "Quiz hasn't started yet.", '/start', res, req );
+        return commons.flash_and_redirect( 'info', "Quiz hasn't started yet. It will start at 12 PM. Please check back again soon.", '/start', res, req );
     }
 
     var user_id = req.session.u[ 0 ];

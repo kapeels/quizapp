@@ -67,8 +67,8 @@ You can login with the following details:\n\
 \n\
 User ID: " + user_id + "\n\
 Password : " + password + "\n\
-\n\
-For more information, contact us on Facebook page: https://www.facebook.com/catalystRGCE \n\
+URL: http://webdig.catalystrgcer.in/\n\
+For more information, contact us on Facebook page: https://www.facebook.com/catalystRGCER \n\
 \n\
 Regards,\n\
 WebDig Team.";
@@ -84,7 +84,8 @@ You can login with the following details:\n\
 \n\
 User ID: " + user_id + "\n\
 Password : " + password + "\n\
-For more information, contact us on Facebook page: https://www.facebook.com/catalystRGCE \n\
+URL: http://webdig.catalystrgcer.in/\n\
+For more information, contact us on Facebook page: https://www.facebook.com/catalystRGCER \n\
 \n\
 Regards,\n\
 WebDig Team.";
