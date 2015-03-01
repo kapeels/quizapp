@@ -124,7 +124,7 @@ app.post( '/start', user.must_be_logged_in, questions.start_quiz );
 app.get( '/questions/:id', user.must_be_logged_in, questions.must_be_within_time_limit, questions.show_question );
 app.post( '/answers/:id', user.must_be_logged_in, questions.must_be_within_time_limit, questions.validate_answer );
 
-//app.get( '/reset_everything', user.must_be_logged_in, user.must_be_admin ,user.reset );
+app.get( '/reset_everything', user.must_be_logged_in, user.must_be_admin ,user.reset );
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

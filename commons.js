@@ -39,8 +39,8 @@ commons.menu = [
 
 commons.quiz_duration = 60; // in minutes
 // year, month = 0 for jan and 11 for dec, day, hours, minutes, seconds
-//commons.quiz_starts_at = new Date( 2015, 2 , 1, 12 ).getTime();
-commons.quiz_starts_at = new Date( 2015, 1 , 26, 11 ).getTime();
+commons.quiz_starts_at = new Date( 2015, 2 , 1, 12 ).getTime();
+//commons.quiz_starts_at = new Date( 2015, 1 , 26, 11 ).getTime();
 
 commons.admin_user = 'CT3001';
 commons.quiz_name = 'WebDig';
@@ -68,9 +68,7 @@ You can login with the following details:\n\
 User ID: " + user_id + "\n\
 Password : " + password + "\n\
 \n\
-For more information, contact us at:\n\
-\n\
-Kapeel: +91 9665884383\n\
+For more information, contact us on Facebook page: https://www.facebook.com/catalystRGCE \n\
 \n\
 Regards,\n\
 WebDig Team.";
@@ -86,9 +84,7 @@ You can login with the following details:\n\
 \n\
 User ID: " + user_id + "\n\
 Password : " + password + "\n\
-For more information, contact us at:\n\
-\n\
-Kapeel: +91 9665884383\n\
+For more information, contact us on Facebook page: https://www.facebook.com/catalystRGCE \n\
 \n\
 Regards,\n\
 WebDig Team.";
