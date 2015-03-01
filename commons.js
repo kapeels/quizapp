@@ -4,7 +4,7 @@ var commons = {};
  * wizard - 1st question to last question wizard-like interface
  * classic - dashboard with status for all the questions
  */
-commons.quiz_type = 'wizard';
+commons.quiz_type = 'classic';
 
 /**
  * remote - email will be asked for...
@@ -12,7 +12,7 @@ commons.quiz_type = 'wizard';
  * local -  no email will not be asked for or dealt with..
  *          ..ideal for contests run in LAN with physical presence of participants
  */
-commons.quiz_mode = 'local';
+commons.quiz_mode = 'remote';
 
 commons.menu = [
     { label: 'Login', glyph: 'log-in', path: '/',
@@ -37,30 +37,31 @@ commons.menu = [
         show: { logged_in: true, logged_out: true, remote: true, local: true } }
 ];
 
-commons.quiz_duration = 10; // in minutes
+commons.quiz_duration = 60; // in minutes
 // year, month = 0 for jan and 11 for dec, day, hours, minutes, seconds
-commons.quiz_starts_at = new Date( 2014, 1 , 15, 12 ).getTime();
+//commons.quiz_starts_at = new Date( 2015, 2 , 1, 12 ).getTime();
+commons.quiz_starts_at = new Date( 2015, 1 , 26, 11 ).getTime();
 
-commons.admin_user = 'CT7001';
-commons.quiz_name = 'QuizApp';
+commons.admin_user = 'CT3001';
+commons.quiz_name = 'WebDig';
 commons.quiz_prefix = 'CT';
 commons.user_id_offset = 1000;
-commons.mega_event = 'QuizEvent';
+commons.mega_event = 'Catalyst';
 
-commons.cookie_secret = 'your secret should go here';
+commons.cookie_secret = '923jrd98ejfn93nf893jn89dn329dm2398d34bgn38denm39d';
 
 commons.smtp_host = '';
 commons.smtp_username = '';
 commons.smtp_password = '';
-commons.email_from_string = '';
+commons.email_from_string = 'WebDig Team <web@catalystrgcer.in>';
 
-commons.mongodb_uri = 'mongodb://root@localhost/quizapp';
+commons.mongodb_uri = 'mongodb://root@localhost/webdig';
 commons.should_send_email = commons.quiz_mode == 'remote';
 
 commons.get_registration_email_text = function( name, user_id, password ) {
     return "Hi " + name +",\n\
 \n\
-Thank you for registering for QuizApp.\n\
+Thank you for registering for WebDig.\n\
 \n\
 You can login with the following details:\n\
 \n\
@@ -69,10 +70,10 @@ Password : " + password + "\n\
 \n\
 For more information, contact us at:\n\
 \n\
-John Doe: +1-800-800\n\
+Kapeel: +91 9665884383\n\
 \n\
 Regards,\n\
-QuizApp Team.";
+WebDig Team.";
 
 }
 
@@ -87,10 +88,10 @@ User ID: " + user_id + "\n\
 Password : " + password + "\n\
 For more information, contact us at:\n\
 \n\
-John Doe: +1-800-800\n\
+Kapeel: +91 9665884383\n\
 \n\
 Regards,\n\
-QuizApp Team.";
+WebDig Team.";
 }
 
 commons.flash_and_redirect = function( alert_type, alert_message, redirect_to, res, req ){

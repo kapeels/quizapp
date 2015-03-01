@@ -38,12 +38,128 @@ var questions = new Array();
 questions.push( {
     question_no: 1,
     type: 1,
-    statement: 'Sample question 1. This is the question text',
+    statement: 'In which game has India won all the world cups in both men and women category?',
     correct_points: 10,
     incorrect_points: 0,
     multiple_responses: true,
-    answer: 'sample1',
-    additional_text: 'The answer for this question is sample1.'
+    answer: 'kabbadi',
+    additional_text: ''
+} );
+
+questions.push( {
+    question_no: 2,
+    type: 1,
+    statement: 'Name the township in India that consists of residents from about 45 nations.',
+    correct_points: 10,
+    incorrect_points: 0,
+    multiple_responses: true,
+    answer: 'auroville',
+    additional_text: ''
+} );
+
+/** PROGATE question on #3 */
+
+questions.push( {
+    question_no: 3,
+    type: 1,
+    statement: '',
+    correct_points: 10,
+    incorrect_points: 2,
+    multiple_responses: true,
+    answer: 'sunday',
+    additional_text: ''
+} );
+
+questions.push( {
+    question_no: 4,
+    type: 1,
+    image: '/images/q4.jpeg',
+    statement: 'When the person in the picture tried to shake hands with Sachin Tendulkar during a practice session, a police officer thrashed him.  On Sachin Tendulkar\'s intervention and request he was let off  and the police officer tendered an apology to him. Name the day of this incidence (Eg. Monday, Wednesday, etc).',
+    correct_points: 10,
+    incorrect_points: 2,
+    multiple_responses: true,
+    answer: 'sunday',
+    additional_text: 'Every incorrect answer submission for this particular question will result in 2 negative points.'
+} );
+
+questions.push( {
+    question_no: 5,
+    type: 1,
+    image: '/images/q5.jpg',
+    statement: 'In 1977, a machine was used to confirm the calculation given performed mentally by her. How many number of instruction did the machine have?',
+    correct_points: 10,
+    incorrect_points: 2,
+    multiple_responses: true,
+    answer: '38',
+    additional_text: ''
+} );
+
+questions.push( {
+    question_no: 6,
+    type: 1,
+    statement: 'According to the IT ACT, 2008<br /><br /> "With its grammatical variations and cognate expressions means gaining entry into, instructing or communicating with the  logical, arithmetical, or memory function resources of a computer, computer  system or computer network" <br /><br />Name the word for which word this definition has been created',
+    correct_points: 10,
+    incorrect_points: 0,
+    multiple_responses: true,
+    answer: 'access',
+    additional_text: ''
+} );
+
+questions.push( {
+    question_no: 7,
+    type: 1,
+    statement: 'The prestigious Columbia University of USA completed its 250 years of establishment in 2004. To commemorate this, a memorial was built inscribing a list of 100 pioneering students of this university. This elite list contains many prestigious personalities. What is the surname of the only Indian in the list?',
+    correct_points: 10,
+    incorrect_points: 0,
+    multiple_responses: true,
+    answer: 'ambedkar',
+    additional_text: ''
+} );
+
+/** dont use this question as it is -- add some detail */
+
+questions.push( {
+    question_no: 8,
+    type: 1,
+    statement: 'This is a biochemist who shared his nobel prize with two others, one has received his BS degree in 1948. What was the cause of his death?',
+    correct_points: 10,
+    incorrect_points: 0,
+    multiple_responses: true,
+    answer: 'cancer',
+    additional_text: ''
+} );
+
+questions.push( {
+    question_no: 9,
+    type: 1,
+    statement: 'The world war is well known to us. This term emerged in the early 20th century. What is it known as in Germany?',
+    correct_points: 10,
+    incorrect_points: 0,
+    multiple_responses: true,
+    answer: 'weltkrieg',
+    additional_text: ''
+} );
+
+questions.push( {
+    question_no: 10,
+    type: 1,
+    statement: '20°31\'56"N 75°44\'44"E are the co-ordinates for a site of great and ancient Indian art. What is the first name of the officer who discovered it in modern times?',
+    correct_points: 10,
+    incorrect_points: 0,
+    multiple_responses: true,
+    answer: 'john',
+    additional_text: ''
+} );
+
+questions.push( {
+    question_no: 11,
+    type: 1,
+    statement: 'A software company is the official cloud partner of ICC World Cup. This company acquired a social media analytics company, which is partnered with a social media data aggregation company. Name this company.',
+    correct_points: 10,
+    incorrect_points: 0,
+    multiple_responses: true,
+    answer: 'gnip',
+    additional_text: ''
 } );
 
 questions.push( {

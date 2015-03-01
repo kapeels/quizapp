@@ -102,12 +102,17 @@ exports.registration_process = function( req, res ) {
         }
         else {
             if( commons.should_send_email ) {
-                send_email( commons.quiz_name + " Registration", commons.get_registration_email_text( name, user.user_id, user.password ), email, function(){
-                    return commons.flash_and_redirect( 'success', 'You have been registered successfully. Please check your email for your ' + commons.mega_event +' ID and password.', '/', res, req );
+                send_email( commons.quiz_name + " Registration", commons.get_registration_email_text( name, user.user_id, user.password ), email, function(resp){
+                    req.session.l = true;
+                    req.session.u = new Array( user.user_id, name, 0 );
+                    req.session.c = Math.round( new Date().getTime() / 1000 );
+                    req.session.ls = null;
+                    req.session.sa = null;
+                    return commons.flash_and_redirect( 'success', 'You have been registered successfully. We have sent you an email with your login details. Your login details: <br /><br /><b>Catalyst ID: ' + user.user_id + '<br /> Password: ' + user.password + '</b>', '/start', res, req );    
                 } );
             }
             else {
-                return commons.flash_and_redirect( 'success', 'User registered successfully.<br />User ID: ' + user.user_id + '<br /> Password: ' + user.password, '/register ', res, req );
+                return commons.flash_and_redirect( 'success', 'User registered successfully.<br />User ID: ' + user.user_id + '<br /> Password: ' + user.password, '/register', res, req );
             }
         }
     }, function(){ // on duplicate email error
@@ -229,14 +234,10 @@ function generate_password( min, max ) {
 }
 
 function send_email( subject, text, email, success ) {
-    var smtpTransport = nodemailer.createTransport("SMTP",{
-        host: commons.smtp_host,
-        secureConnection: true, // use SSL
-        port: 465, // port for secure SMTP
-        auth: {
-            user: commons.smtp_username,
-            pass: commons.smtp_password
-        }
+    var smtpTransport = nodemailer.createTransport("SES",{
+        AWSAccessKeyID: "AKIAJGFQHP6T7473LWQQ",
+        AWSSecretKey: "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",
+        ServiceUrl: "https://email.eu-west-1.amazonaws.com"
     });
     smtpTransport.sendMail( {
         from: commons.email_from_string, // sender address
@@ -244,13 +245,12 @@ function send_email( subject, text, email, success ) {
         subject: subject,
         text: text
     },function( error, response ){
-        smtpTransport.close();
         if( error ) {
-            console.log ( 'email sending failed' );
+            console.log ( 'email sending failed', error );
         }
         else {
             console.log( 'email sent successfully' );
-            success();
         }
+        success();
     } );
 }

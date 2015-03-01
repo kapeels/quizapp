@@ -10,6 +10,9 @@ var qid_max = questions.length - 1,
     qid_min = 0;
 
 exports.show_page = function( req, res ){
+    if( req.session.sa === null ) {
+        return commons.flash_and_redirect( 'info', 'You must start the quiz to view questions.', '/start', res, req );
+    }
     Response.find( { user_id: req.session.u[ 0 ] }, null, { sort: { created: 1 } }, function( error, responses ){
         if( !error ) {
             var questions_status = get_empty_question_status();
