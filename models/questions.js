@@ -132,7 +132,7 @@ questions.push( {
 questions.push( {
     question_no: 8,
     type: 1,
-    statement: 'The world war is well known to us. This term emerged in the early 20th century. What is it known as in Germany?',
+    statement: 'The world war is well known to us. This term emerged in the early 20th century. What is this term known as, in Germany?',
     correct_points: 10,
     incorrect_points: 0,
     multiple_responses: true,
@@ -165,7 +165,7 @@ questions.push( {
 questions.push( {
     question_no: 11,
     type: 1,
-    statement: 'A a computer language developed in 1973 at AT&T Bell Labs. In which year, did one of the founder of this language receive the Turing Award?',
+    statement: 'A computer language was developed in 1973 at AT&T Bell Labs. In which year, did one of the founder of this language receive the Turing Award?',
     correct_points: 10,
     incorrect_points: 0,
     multiple_responses: true,

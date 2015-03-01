@@ -4,7 +4,7 @@ var mongoose = require( 'mongoose'),
 
 exports.show_page = function( req, res ){
 
-    User.find( null, 'user_id college score last_change_in started_at', { sort: { score: -1, last_change_in: 1 } }, function( error, users ){
+    User.find( { "started_at": {'$ne': null } }, 'user_id college score last_change_in started_at', { sort: { score: -1, last_change_in: 1 } }, function( error, users ){
         if( !error ) {
             if( users ) {
                 users.forEach( function( e, i ){
