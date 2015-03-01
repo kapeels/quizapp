@@ -39,7 +39,7 @@ commons.menu = [
 
 commons.quiz_duration = 60; // in minutes
 // year, month = 0 for jan and 11 for dec, day, hours, minutes, seconds
-commons.quiz_starts_at = new Date( 2015, 2 , 1, 12 ).getTime();
+commons.quiz_starts_at = new Date( 2015, 2 , 1, 13 ).getTime();
 //commons.quiz_starts_at = new Date( 2015, 1 , 26, 11 ).getTime();
 
 commons.admin_user = 'CT3001';
