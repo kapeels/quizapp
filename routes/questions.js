@@ -27,7 +27,8 @@ exports.show_page = function( req, res ){
             res.render( 'questions', {
                 title: commons.quiz_name + ' | Play!',
                 last_submission: req.session.ls ? moment( req.session.ls ).calendar() : 'Never',
-                score: req.session.u[2],
+                //score: req.session.u[2] + ' points',
+                score: 'N/A',
                 questions: questions_status,
                 can_solve: commons.is_under_time_limit( req.session.sa )
             } );
@@ -96,7 +97,8 @@ exports.show_question = function( req, res ) {
                     qid_max: qid_max,
                     qid_min: qid_min,
                     question: question,
-                    answer_allowed: answer_allowed
+                    answer_allowed: answer_allowed,
+                    map: [ 'a', 'b', 'c', 'd', 'e', 'f' ]
                 } );
             }
             console.log( 'unexpected error occurred' );
@@ -175,7 +177,7 @@ exports.validate_answer = function( req, res ) {
                         }
                     }
                 }
-                add_response( user_id, question_id - 1, answer, true, question.correct_points );
+                add_response( user_id, question_id - 1, answer, true, question.correct_points, req );
                 increment_score( user_id, question.correct_points, req );
 
                 if( commons.quiz_type == 'wizard' ) {
@@ -194,7 +196,7 @@ exports.validate_answer = function( req, res ) {
     }
     else {
         // incorrect answer.. but add to record anyway!
-        add_response( user_id, question_id - 1, answer, false, question.incorrect_points );
+        add_response( user_id, question_id - 1, answer, false, question.incorrect_points, req );
 
         // do negative marking if this question has it!
         if( question.incorrect_points != null && question.incorrect_points > 0 ) {
@@ -270,13 +272,19 @@ function increment_score( user_id, score, req ) {
     user_score = parseInt( user_score + score );
     req.session.u[ 2 ] = user_score;
 
+    User.findOneAndUpdate( { user_id: user_id }, { score: user_score }).exec();
+    //update_last_submission( user_id, req )
+    // moved this to be called from add_response -- this is because we are collecting last submission times even for incorrect answers now
+}
+
+function update_last_submission( user_id, req ) {
     var started_at = new Date( req.session.sa ).getTime();
     var last_change_in = new Date().getTime() - started_at;
     req.session.ls = Date.now();
-    User.findOneAndUpdate( { user_id: user_id }, { score: user_score, last_submission: req.session.ls, last_change_in: last_change_in }).exec();
+    User.findOneAndUpdate( { user_id: user_id }, { last_submission: req.session.ls, last_change_in: last_change_in }).exec();
 }
 
-function add_response( user_id, question_no, response, correct, score ) {
+function add_response( user_id, question_no, response, correct, score, req ) {
 
     if( !user_id || ( question_no < qid_min && question_no > qid_max ) || !response ) {
         console.log( 'incorrect response params' );
@@ -291,6 +299,8 @@ function add_response( user_id, question_no, response, correct, score ) {
         score: score,
         created: Date.now()
     } );
+
+    update_last_submission( user_id, req );
 
 }
 

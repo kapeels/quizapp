@@ -31,30 +31,31 @@ commons.menu = [
         show: { logged_in: true, logged_out: false, remote: true, local: true } },
 
     { label: 'Scoreboard', glyph: 'list-alt', path: '/scoreboard',
-        show: { logged_in: true, logged_out: true, remote: true, local: true } },
+        show: { logged_in: true, logged_out: true, remote: true, local: false } },
 
     { label: 'Help', glyph: 'question-sign', path: '/help',
-        show: { logged_in: true, logged_out: true, remote: true, local: true } }
+        show: { logged_in: true, logged_out: true, remote: true, local: false } }
 ];
 
-commons.quiz_duration = 10; // in minutes
+commons.quiz_duration = 30; // in minutes
 // year, month = 0 for jan and 11 for dec, day, hours, minutes, seconds
-commons.quiz_starts_at = new Date( 2014, 1 , 15, 12 ).getTime();
+commons.quiz_starts_at = new Date( 2015, 2 , 12, 11, 0 ).getTime();
+//commons.quiz_starts_at = new Date( 2015, 1 , 26, 10, 30 ).getTime();
 
-commons.admin_user = 'CT7001';
-commons.quiz_name = 'QuizApp';
-commons.quiz_prefix = 'CT';
-commons.user_id_offset = 1000;
-commons.mega_event = 'QuizEvent';
+commons.admin_user = 'QZ9001';
+commons.quiz_name = 'Quizache';
+commons.quiz_prefix = 'QZ';
+commons.user_id_offset = 5000;
+commons.mega_event = 'Catalyst 16';
 
-commons.cookie_secret = 'your secret should go here';
+commons.cookie_secret = '1293i1290349jdfm9dsmf9sdmf92md9';
 
 commons.smtp_host = '';
 commons.smtp_username = '';
 commons.smtp_password = '';
 commons.email_from_string = '';
 
-commons.mongodb_uri = 'mongodb://root@localhost/quizapp';
+commons.mongodb_uri = 'mongodb://root@localhost/quizache2016';
 commons.should_send_email = commons.quiz_mode == 'remote';
 
 commons.get_registration_email_text = function( name, user_id, password ) {

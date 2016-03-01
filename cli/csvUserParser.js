@@ -1,7 +1,7 @@
 var fs = require('fs');
 var csv = require('csv');
 var sleep = require( 'sleep' );
-
+process.exit(0);
 if ( fs.existsSync( '../commons.local.js' ) ) {
     commons = require( '../commons.local.js' );
 }
@@ -18,10 +18,11 @@ var mongoose = require( 'mongoose' );
 mongoose.connection.on( 'connected', function () {
     index = 0;
     csv()
-        .from.stream(fs.createReadStream(__dirname+'/csv/users.csv'))
+        .from.stream(fs.createReadStream(__dirname+'/users.csv'))
         .transform( function(row){
             index++;
             console.log( 'attempting #' + index );
+            //console.log(row);
             user.register_user( row[ 0 ], row[ 1 ], row[ 2 ], row[ 3 ], function( error, user ){
                 if( error ) {
                     console.log( '#' + index + ': failed' );
@@ -32,7 +33,7 @@ mongoose.connection.on( 'connected', function () {
                 else {
                     console.log( '#' + index + ': wat' );
                 }
-            }, null, row[ 5 ] ,row[ 4 ] );
+            }, null, row[ 4 ] ,row[ 5 ] );
 
             //row.unshift(row.pop());
             return row;
@@ -46,4 +47,5 @@ mongoose.connection.on( 'connected', function () {
         })
         .on('error', function(error){
             console.log(error.message);
-        });});
+        });
+    });

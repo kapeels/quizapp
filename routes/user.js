@@ -19,7 +19,8 @@ exports.must_be_logged_in = function( req, res, next ) {
 exports.registration_page = function( req, res ) {
     res.render( 'register', {
         title: commons.quiz_name + ' | Register',
-        enable_email: commons.should_send_email
+        enable_email: commons.should_send_email,
+        is_local: commons.quiz_mode === 'local'
     } );
 };
 
@@ -27,11 +28,11 @@ exports.login_process = function( req, res ) {
     var user_id = validator.trim( req.body.user_id ).toUpperCase();
     if( validator.isNull( user_id ) || !validator.isAlphanumeric( user_id ) || user_id == "" || !validator.isLength( user_id, 6, 6 ) ) {
         console.log( 'invalid user id:' + user_id );
-        return commons.flash_and_redirect( 'danger', 'Invalid ' + commons.mega_event +' ID entered. Please try again.', '/', res, req );
+        return commons.flash_and_redirect( 'danger', 'Invalid ' + commons.quiz_name+' ID entered. Please try again.', '/', res, req );
     }
 
     var password = validator.trim( req.body.password );
-    if( !validator.isNumeric( password ) || !validator.isLength( password, 6, 6 ) ) {
+    if( !validator.isNumeric( password ) /*|| !validator.isLength( password, 6, 6 )*/ ) {
         console.log( 'invalid user password:' + password );
         return commons.flash_and_redirect( 'danger', 'Incorrect password entered. Please try again.', '/', res, req );
     }

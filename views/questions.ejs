@@ -2,7 +2,7 @@
 <div class="row">
     <div class="page-header col-md-12">
         <div class="row-fluid">
-            <h4 class="col-md-6">Your Score: <strong class="text-info"><%= score %> points</strong></h3>
+            <h4 class="col-md-6"><!--Your Score: <strong class="text-info"><%= score %>--></strong></h3>
             <h4 class="col-md-6" style="text-align:right;">Last Submission: <strong class="text-success"><%= last_submission %></strong></h3>
         </div>
     </div>
@@ -27,7 +27,7 @@ if( !can_solve ) {
                 <tr>
                     <th style="width:10%">#</th>
                     <th style="width:70%"><span class="glyphicon glyphicon-time"></span> Completed</th>
-                    <th style="width:20%"><span class="glyphicon glyphicon-th"></span> Action</th>
+                    <th style="width:20%"><span class="glyphicon glyphicon-th"></span> Status</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,12 +38,12 @@ if( !can_solve ) {
                         <%
                         if( questions[ i ].complete ) {
                             %>
-                            <td><a href="#" onclick="return false;" class="btn btn-success btn-mini disabled"><span class="glyphicon glyphicon-ok-sign"></span> Correct</a></td>
+                            <td><a href="#" onclick="return false;" class="btn btn-info btn-mini disabled"><span class="glyphicon glyphicon-hand-up"></span> Solved</a></td>
                             <%
                         }
                         else if( questions[ i ].attempted && !questions[ i ].multiple_responses ) {
                             %>
-                            <td><a href="#" onclick="return false;" class="btn btn-danger btn-mini disabled"><span class="glyphicon glyphicon-remove-sign"></span> Incorrect</a></td>
+                            <td><a href="#" onclick="return false;" class="btn btn-info btn-mini disabled"><span class="glyphicon glyphicon-hand-up"></span> Solved</a></td>
                             <%
                         }
                         else {
