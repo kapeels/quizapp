@@ -19,6 +19,9 @@ exports.show_page = function( req, res ){
             if( responses ) {
                 responses.forEach( function( e, i, a ) {
                     var mr = questions_status[ e.question_no ].multiple_responses;
+                    if( e.correct ) {
+                        e.created = new Date( e.created.getTime( ) + 19800000 );
+                    }
                     questions_status[ e.question_no ] = {
                         completed_at:  e.correct || ( !e.correct && !mr ) ? moment( e.created ).calendar( ) : 'Incomplete',
                         complete: e.correct,

@@ -61,7 +61,7 @@ commons.should_send_email = commons.quiz_mode == 'remote';
 commons.get_registration_email_text = function( name, user_id, password ) {
     return "Hi " + name +",\n\
 \n\
-Thank you for registering for WebDig.\n\
+Thank you for registering for WebDig 16.\n\
 \n\
 You can login with the following details:\n\
 \n\
@@ -71,7 +71,7 @@ URL: http://webdig.catalystrgcer.in/\n\
 For more information, contact us on Facebook page: https://www.facebook.com/catalystRGCER \n\
 \n\
 Regards,\n\
-WebDig Team.";
+Team WebDig.";
 
 }
 
@@ -88,7 +88,7 @@ URL: http://webdig.catalystrgcer.in/\n\
 For more information, contact us on Facebook page: https://www.facebook.com/catalystRGCER \n\
 \n\
 Regards,\n\
-WebDig Team.";
+Team WebDig.";
 }
 
 commons.flash_and_redirect = function( alert_type, alert_message, redirect_to, res, req ){
