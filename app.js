@@ -41,7 +41,6 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(express.cookieParser(commons.cookie_secret));
 app.use(express.session({
-
     cookie: { maxAge: 3600000 }, // 1 hour..
     //.. so that mongodb clears the session details one hour later if user doesn't log out
     secret: commons.cookie_secret,

@@ -55,7 +55,7 @@ if( !answer_allowed ) {
         %>
         <div class="row" style="margin-bottom: 20px;">
             <div class="col-md-12">
-              <form action="/answers/<%= question_id %>" method="post" role="form">
+              <form action="/answers/<%= question_id %>" id="qform" method="post" role="form">
                 <div class="col-md-6">
                     <%
                     if( question.type == 1 ) {
@@ -82,6 +82,9 @@ if( !answer_allowed ) {
                         %>
                         <br />
                         <button type="submit" class="btn btn-default <%= !answer_allowed ? 'disabled' : '' %>"><span class="glyphicon glyphicon-flash"></span> Submit</button>
+                        <br /><br />
+                        <input type="hidden" name="mfr" id="mfr" value="false" />
+                        <button class="btn btn-primary btn-mfr"><span class="glyphicon glyphicon-eye-open"></span> Skip & Mark for Review</button>
                         <%
                     }
                     %>
@@ -99,4 +102,12 @@ if( !answer_allowed ) {
         <a href="/questions/<%= question_id + 1 %>" class="btn btn-default  <%= qid_max == question_id - 1 ? 'disabled' : '' %>">Next <span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
 </div>
+<script type="text/javascript">
+$( document ).ready( function( ){
+  $( ".btn-mfr" ).click( function( ){
+    $( '#mfr' ).val( 'true' );
+    $( '#qform' ).submit( );
+  } );
+} );
+</script>
 <% include common/footer %>

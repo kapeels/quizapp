@@ -139,7 +139,8 @@ function shuffle(array) {
 exports.validate_answer = function( req, res ) {
     var question_id = req.params.id,
         answer = validator.trim( req.body.answer).toLowerCase(),
-        user_id = req.session.u[ 0 ];
+        user_id = req.session.u[ 0 ],
+        mfr = req.body.mfr;
 
     if( !question_id || question_id < qid_min + 1 || question_id > qid_max + 1 ) {
         console.log( "Invalid question" );
@@ -149,6 +150,11 @@ exports.validate_answer = function( req, res ) {
     if( !answer ) {
         //console.log( "Empty answer yo" );
         return commons.flash_and_redirect( 'danger', 'Please type an answer before submitting.', '/questions/' + question_id, res, req );
+    }
+
+    if( mfr === 'true' ) {
+        add_response( user_id, question_id - 1, null, null, null, req, true );
+        return;
     }
 
     var question = questions[ question_id - 1 ];
@@ -323,11 +329,27 @@ function update_last_submission( user_id, req ) {
     User.findOneAndUpdate( { user_id: user_id }, { last_submission: req.session.ls, last_change_in: last_change_in }).exec();
 }
 
-function add_response( user_id, question_no, response, correct, score, req ) {
+function add_response( user_id, question_no, response, correct, score, req, mfr_value ) {
+
+    var mfr_at_all = typeof mfr_value === 'undefined';
 
     if( !user_id || ( question_no < qid_min && question_no > qid_max ) || !response ) {
         console.log( 'incorrect response params' );
         return;
+    }
+
+    if( mfr_at_all ) {
+      Response.create( {
+          user_id: user_id,
+          question_no: question_no,
+          review_clicked: mfr_at_all,
+          review_status: mfr_value,
+          response: null,
+          correct: null,
+          score: null,
+          created: null
+      } );
+      return;
     }
 
     Response.create( {
