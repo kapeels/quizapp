@@ -6,6 +6,8 @@ var questions = require( '../models/questions.js' ),
     validator = require( 'validator'),
     moment = require( 'moment' );
 
+var _ = require( 'lodash' );
+
 var qid_max = questions.length - 1,
     qid_min = 0;
 
@@ -20,12 +22,18 @@ exports.show_page = function( req, res ){
                         completed_at:  e.correct || ( !e.correct && !mr ) ? moment( e.created ).calendar( ) : 'Incomplete',
                         complete: e.correct,
                         attempted: true,
-                        multiple_responses: mr
+                        multiple_responses: mr,
+                        section: questions_status[ e.question_no ].section
                     }
                 } );
             }
             res.render( 'questions', {
                 title: commons.quiz_name + ' | Play!',
+                sections: [
+                  { name: 'Physics' },
+                  { name: 'Chemistry' },
+                  { name: 'Mathematics' }
+                ],
                 last_submission: req.session.ls ? moment( req.session.ls ).calendar() : 'Never',
                 //score: req.session.u[2] + ' points',
                 score: 'N/A',
@@ -178,7 +186,7 @@ exports.validate_answer = function( req, res ) {
                     }
                 }
                 add_response( user_id, question_id - 1, answer, true, question.correct_points, req );
-                increment_score( user_id, question.correct_points, req );
+                increment_score( user_id, question.correct_points, question.section, req );
 
                 if( commons.quiz_type == 'wizard' ) {
                     // if the quiz is of wizard type, don't notify about the answer type... and redirect to next question
@@ -200,7 +208,7 @@ exports.validate_answer = function( req, res ) {
 
         // do negative marking if this question has it!
         if( question.incorrect_points != null && question.incorrect_points > 0 ) {
-            increment_score( user_id, 0 - question.incorrect_points, req )
+            increment_score( user_id, 0 - question.incorrect_points, question.section, req )
         }
         // console.log( "incorrect answer man. try again" );
 
@@ -252,6 +260,24 @@ exports.start_quiz = function( req, res ) {
 
 }
 
+exports.stop_quiz = function( req, res ) {
+
+    var user_id = req.session.u[ 0 ];
+    if( !req.session.is_completed ) {
+
+        User.findOneAndUpdate( { user_id: user_id }, { quiz_completed_at: Date.now(), quiz_completed: true } ).exec();
+        req.session.is_completed = true;
+
+        // started the quiz.. redirect user to question #1
+        return commons.flash_and_redirect( 'info', 'Your test has been submitted!', '/questions', res, req );
+    }
+    else {
+        // user has already stopped the quiz.. cannot stop again!
+        return commons.flash_and_redirect( 'warning', 'Your test has already been submitted.', '/questions', res, req );
+    }
+
+}
+
 exports.must_be_within_time_limit = function( req, res, next ) {
     if( req.session.sa == null ) {
         // user hasn't started the quiz yet
@@ -267,13 +293,26 @@ exports.must_be_within_time_limit = function( req, res, next ) {
     next();
 }
 
-function increment_score( user_id, score, req ) {
+function increment_score( user_id, score, question_section, req ) {
     var user_score = req.session.u[ 2 ];
     user_score = parseInt( user_score + score );
     req.session.u[ 2 ] = user_score;
 
-    User.findOneAndUpdate( { user_id: user_id }, { score: user_score }).exec();
-    //update_last_submission( user_id, req )
+    User.findOne( { user_id: user_id }, { section_wise_score: 1 }, function( error, result ){
+        if( error ) {
+          console.log( 'unexpected error occurred' );
+          console.error( 'WARNING! SCORE DISCREPANCY OCCURRED.' );
+        }
+        else {
+          var current_section_wise_score = result.section_wise_score;
+          var to_increment = _.findIndex( current_section_wise_score, { section: question_section } );
+          var section_score = current_section_wise_score[ to_increment ].score;
+          section_score = parseInt( section_score + score );
+          current_section_wise_score[ to_increment ] = { section: question_section, score: section_score };
+          User.update( { user_id: user_id }, { section_wise_score: current_section_wise_score } ).exec();
+          User.findOneAndUpdate( { user_id: user_id }, { score: user_score }).exec();
+        }
+    } );
     // moved this to be called from add_response -- this is because we are collecting last submission times even for incorrect answers now
 }
 
@@ -311,6 +350,7 @@ function get_empty_question_status( ) {
             completed_at: 'Incomplete',
             correct: false,
             attempted: false,
+            section: e.section,
             multiple_responses: e.multiple_responses
         } );
     } );

@@ -59,6 +59,7 @@ exports.login_process = function( req, res ) {
                 req.session.c = Math.round( new Date().getTime() / 1000 );
                 req.session.ls = user.last_submission;
                 req.session.sa = user.started_at;
+                req.session.is_completed = user.quiz_completed;
                 return commons.flash_and_redirect( 'success', 'You have been logged in successfully.', user.started_at == null ? '/start' : '/questions', res, req );
             }
             else {
@@ -150,8 +151,15 @@ exports.register_user = function( name, college, phone, email, callback, email_e
                         created: Date.now(),
                         active: true,
                         score: 0,
+                        section_wise_score: [
+                          { section: 0, score: 0 },
+                          { section: 1, score: 0 },
+                          { section: 2, score: 0 }
+                        ],
                         last_submission: null,
-                        started_at: null
+                        started_at: null,
+                        quiz_completed: false,
+                        quiz_completed_at: null
                     }, callback);
                 }
             );
@@ -193,7 +201,7 @@ exports.forgot_password_process = function( req, res ) {
             if( commons.should_send_email ) {
                 send_email( commons.quiz_name + " login details", commons.get_forgot_password_email_text( user.name, user.user_id, user.password ), email, function(){
                     return commons.flash_and_redirect( 'success', 'Your ' + commons.mega_event +' ID and password have been sent to your email address.', '/', res, req );
-                } );    
+                } );
             }
             else {
                 return commons.flash_and_redirect( 'success', 'Your ' + commons.mega_event +' ID is <strong>' + user.user_id +'</strong> and password is <strong>' + user.password + '</strong>.', '/forgot_password', res, req );

@@ -24,8 +24,11 @@ commons.menu = [
     { label: 'Forgot Password', glyph: 'info-sign', path: '/forgot_password',
         show: { logged_in: false, logged_out: true, remote: true, local: false } },
 
-    { label: 'Play', glyph: 'play', path: '/start',
+    { label: 'Start Test', glyph: 'play', path: '/start',
         show: { logged_in: true, logged_out: false, remote: true, local: true } },
+
+    //{ label: 'Submit Test', glyph: 'stop', path: '/submit',
+      //  show: { logged_in: true, logged_out: false, remote: true, local: true } },
 
     { label: 'Log Out', glyph: 'log-out', path: '/logout',
         show: { logged_in: true, logged_out: false, remote: true, local: true } },
@@ -43,10 +46,10 @@ commons.quiz_starts_at = new Date( 2015, 2 , 12, 11, 0 ).getTime();
 //commons.quiz_starts_at = new Date( 2015, 1 , 26, 10, 30 ).getTime();
 
 commons.admin_user = 'QZ9001';
-commons.quiz_name = 'Quizache';
+commons.quiz_name = 'RGCER Test';
 commons.quiz_prefix = 'QZ';
 commons.user_id_offset = 5000;
-commons.mega_event = 'Catalyst 16';
+commons.mega_event = 'RGCER';
 
 commons.cookie_secret = '1293i1290349jdfm9dsmf9sdmf92md9';
 
@@ -55,7 +58,7 @@ commons.smtp_username = '';
 commons.smtp_password = '';
 commons.email_from_string = '';
 
-commons.mongodb_uri = 'mongodb://root@localhost/quizache2016';
+commons.mongodb_uri = 'mongodb://root@localhost/quizapp-rgcer';
 commons.should_send_email = commons.quiz_mode == 'remote';
 
 commons.get_registration_email_text = function( name, user_id, password ) {

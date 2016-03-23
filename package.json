@@ -1,20 +1,21 @@
 {
   "name": "quizapp",
-  "description":"a simple quizzing app",
+  "description": "a simple quizzing app",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "node app.js"
   },
   "dependencies": {
-    "express": "3.4.8",
-    "ejs": "*",
-    "mongoose": "3.8.*",
-    "validator": "3.2.*",
-    "nodemailer": "0.6.*",
-    "moment": "2.5.*",
     "connect-mongo": "0.4.*",
     "csv": "0.3.*",
-    "sleep": "latest"
+    "ejs": "*",
+    "express": "3.4.8",
+    "lodash": "^4.6.0",
+    "moment": "2.5.*",
+    "mongoose": "3.8.*",
+    "nodemailer": "0.6.*",
+    "sleep": "latest",
+    "validator": "3.2.*"
   }
 }
