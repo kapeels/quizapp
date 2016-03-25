@@ -14,7 +14,7 @@ var qid_max = questions.length - 1,
 exports.show_page = function( req, res ){
     Response.find( { user_id: req.session.u[ 0 ] }, null, { sort: { created: 1 } }, function( error, responses ){
         if( !error ) {
-            var questions_status = get_empty_question_status();
+            var questions_status = get_empty_question_status( req.session.question_sheet );
            
             if( responses ) {
                 responses.forEach( function( e, i, a ) {
@@ -29,10 +29,7 @@ exports.show_page = function( req, res ){
                         status = 3;
                     }
 
-                    questions_status[ e.question_no ] = {
-                        status: status,                       
-                        section: questions_status[ e.question_no ].section
-                    }
+                    questions_status[ e.displayed_question_no ][ 'status' ] = status;
                 } );
             }
             res.render( 'questions', {
@@ -57,10 +54,12 @@ exports.show_question = function( req, res ) {
         return commons.flash_and_redirect( 'danger', 'Question not found.', '/questions', res, req );
     }
 
-    var question = questions[ question_id - 1 ];
+    var question = questions[ req.session.question_sheet[ question_id - 1 ] ];
+
+    var actual_question_id = question.question_no - 1;
 
     Response.find(
-        { user_id: req.session.u[ 0 ], question_no: question_id - 1 },
+        { user_id: req.session.u[ 0 ], question_no: actual_question_id },
         null,
         { sort: { created: 1 } },
         function( error, responses ){
@@ -161,9 +160,11 @@ exports.validate_answer = function( req, res ) {
         return commons.flash_and_redirect( 'danger', 'Please type an answer before submitting.', '/questions/' + question_id, res, req );
     }    
 
-    Response.find( { user_id: user_id, question_no: question_id - 1 }, function( error, responses ){
+    var question = questions[ req.session.question_sheet[ question_id - 1 ] ];
+    var actual_question_id = question.question_no - 1;
+
+    Response.find( { user_id: user_id, question_no: actual_question_id }, function( error, responses ){
         if( !error ) {
-            var question = questions[ question_id - 1 ];
             var prior_response_id = '';
             if( responses.length > 0 ) {
                 // we have prior responses...
@@ -173,7 +174,7 @@ exports.validate_answer = function( req, res ) {
             }
 
             if( cleared_response === 'true' ) {
-                add_response( prior_response_id, user_id, question_id - 1, question.section, null, null, null, req, true, false );
+                add_response( prior_response_id, user_id, actual_question_id, question_id - 1, question.section, null, null, null, req, true, false );
                 return res.redirect( get_next_question_path( question_id - 1 ) );        
             }
 
@@ -205,7 +206,7 @@ exports.validate_answer = function( req, res ) {
             }           
             
             // MFR was not turned on
-            add_response( prior_response_id, user_id, question_id - 1, question.section, answer, correct_answer, answer_points, req, answer_submitted, mfr_clicked, mfr_value );
+            add_response( prior_response_id, user_id, actual_question_id, question_id - 1, question.section, answer, correct_answer, answer_points, req, answer_submitted, mfr_clicked, mfr_value );
             return res.redirect( get_next_question_path( question_id ) );        
         }
         console.log( "unexpected error occurred" );
@@ -314,7 +315,7 @@ function update_last_submission( user_id, req ) {
     User.findOneAndUpdate( { user_id: user_id }, { last_submission: req.session.ls, last_change_in: last_change_in }).exec();
 }
 
-function add_response( prior_response_id, user_id, question_no, question_section, response, correct, score, req, answer_submitted, mfr_clicked, mfr_value ) {
+function add_response( prior_response_id, user_id, question_no, displayed_question_no, question_section, response, correct, score, req, answer_submitted, mfr_clicked, mfr_value ) {
 
     var to_update = false;
     var response_object = { };
@@ -344,6 +345,7 @@ function add_response( prior_response_id, user_id, question_no, question_section
                 response_type: 'answer',
                 user_id: user_id,
                 question_no: question_no,
+                displayed_question_no: displayed_question_no,
                 question_section: question_section,
                 response: response,
                 correct: correct,
@@ -359,6 +361,7 @@ function add_response( prior_response_id, user_id, question_no, question_section
               response_type: 'review',
               user_id: user_id,
               question_no: question_no,
+              displayed_question_no: displayed_question_no,
               question_section: question_section,
               mfr_value: true,
               response: null,
@@ -373,14 +376,16 @@ function add_response( prior_response_id, user_id, question_no, question_section
     update_last_submission( user_id, req );
 }
 
-function get_empty_question_status( ) {
+function get_empty_question_status( question_sheet ) {
     var question_status = new Array();
-    questions.forEach( function( e ){
+
+    for( var i = 0; i < question_sheet.length; i++ ) {
         question_status.push( {
             status: 1,
-            section: e.section,
-        } );
-    } );
+            section: questions[ question_sheet[ i ] ].section,
+        } );        
+    }
+  
     return question_status;
 }
 

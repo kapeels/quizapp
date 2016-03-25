@@ -60,6 +60,7 @@ exports.login_process = function( req, res ) {
                 req.session.ls = user.last_submission;
                 req.session.sa = user.started_at;
                 req.session.is_completed = user.quiz_completed;
+                req.session.question_sheet = user.question_sheet;
                 return commons.flash_and_redirect( 'success', 'You have been logged in successfully.', user.started_at == null ? '/start' : '/questions', res, req );
             }
             else {
@@ -118,6 +119,28 @@ exports.registration_process = function( req, res ) {
     });
 }
 
+function generate_question_sheet( section_lengths ) {
+    var master_sheet = [ ], sub_sheets = [ ], total_length = 0;
+    for( var j = 0; j < section_lengths.length; j++ ) {
+        var sub_sheet = [ ];
+        for( var i = 0; i < section_lengths[ j ]; i++ ) {
+            sub_sheet.push( i );
+        }
+        commons.shuffle( sub_sheet );
+        sub_sheets.push( sub_sheet );
+        total_length += section_lengths[ j ];
+    }
+    
+    var offset = 0;
+    for( var j = 0; j < section_lengths.length; j++ ) {
+        for( var i = 0; i < section_lengths[ j ]; i++ ) {
+            master_sheet.push( offset + sub_sheets[ j ][ i ] );
+        }
+        offset += section_lengths[ j ];
+    }
+    return master_sheet;
+}
+
 exports.register_user = function( name, college, phone, email, callback, email_error, user_id_, password_ ) {
     User.findOne( { email: email }, function( error, user ){
         if( ( commons.should_send_email && !user ) || !commons.should_send_email ) {
@@ -156,6 +179,7 @@ exports.register_user = function( name, college, phone, email, callback, email_e
                           { section: 1, score: 0 },
                           { section: 2, score: 0 }
                         ],
+                        question_sheet: generate_question_sheet( [ 50, 25, 25 ] ),
                         last_submission: null,
                         started_at: null,
                         quiz_completed: false,

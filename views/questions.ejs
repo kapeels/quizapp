@@ -20,21 +20,36 @@ if( !can_solve ) {
 %>
 <%
 var statuses = {
-    0: "<span class='text-success'><strong>Answered</strong></span>",
-    1: "<span class='text-primary'><strong>Unanswered</strong></span>",
-    2: "<span class='text-info'><strong>Answered & Marked for Review</strong></span>",
-    3: "<span class='text-warning'><strong>Marked for Review</strong></span>"
+    0: { 
+      text: 'Answered',
+      icon: 'ok',
+      button: 'success'
+    },
+    1: { 
+      text: 'Unanswered',
+      icon: 'warning-sign',
+      button: 'primary'
+    },
+    2: { 
+      text: 'Answered & Marked for Review',
+      icon: 'ok-circle',
+      button: 'info'
+    },
+    3: { 
+      text: 'Marked for Review',
+      icon: 'exclamation-sign',
+      button: 'warning'
+    }
 }
 for( var j = 0; j < sections.length; j++ ) {
   %>
-      <div class="col-md-6">
+      <div class="col-md-4">
         <h4>Section: <%= sections[ j ].name %></h4>
           <table class="table table-bordered">
               <thead>
                   <tr>
-                      <th style="width:10%">#</th>
-                      <th style="width:70%"><span class="glyphicon glyphicon-th"></span> Status</th>
-                      <th style="width:20%"><span class="glyphicon glyphicon-time"></span> Link</th>
+                      <th style="width:20%">#</th>
+                      <th style="width:80%"><span class="glyphicon glyphicon-th"></span> Status</th>
                   </tr>
               </thead>
               <tbody>
@@ -45,9 +60,8 @@ for( var j = 0; j < sections.length; j++ ) {
                       }
                   %>
                       <tr>
-                          <td><%= i+1 %></td>
-                          <td><%- statuses[ questions[ i ].status ] %></td>
-                          <td><a href="/questions/<%= i+1 %>" class="btn btn-primary btn-mini "><span class="glyphicon glyphicon-plane"></span> Visit</a></td>                             
+                          <td><strong><%= i+1 %></strong></td>
+                          <td><a href="/questions/<%= i+1 %>" class="btn btn-<%= statuses[ questions[ i ].status ].button %> btn-mini "><span class="glyphicon glyphicon-<%= statuses[ questions[ i ].status ].icon %>"></span> <%- statuses[ questions[ i ].status ].text %></a></td>
                       </tr>
                   <% } %>
 

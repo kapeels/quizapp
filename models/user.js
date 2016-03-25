@@ -11,6 +11,7 @@ var userSchema = new mongoose.Schema({
     active: Boolean,
     score: Number,
     section_wise_score: [ { section: Number, score: Number } ],
+    question_sheet: [ Number ],
     last_change_in: { type: Number, default: 0 },
     last_submission: { type: Date, default: null },
     started_at: { type: Date, default: null },

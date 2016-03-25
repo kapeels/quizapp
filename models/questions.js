@@ -1869,6 +1869,23 @@ section: 2,
     ),
     additional_text: null
 } );
+questions.push( {
+    question_no: 100,
+    type: 2,
+    statement: 'The dimensions of Stefan’s constant are',
+    correct_points: 1,
+    incorrect_points: 0,
+    multiple_responses: false,
+section: 2,
+    answer: 4,
+    choice: new Array(
+        { text: "[M0 L1 T–3 K–4] ", value: 1 },
+        { text: "[M1 L1 T–3 K–3]", value: 2 },
+        { text: "[M1 L2 T–3 K–4] ", value: 3 },
+        { text: "[M1 L0 T–3 K–4]", value: 4 }
+    ),
+    additional_text: null
+} );
 
 
 
