@@ -4,25 +4,12 @@
         <h4>Question #<%= question_id %></h4>
     </div>
     <div class="col-md-5">
-        <h5>Points: Correct Answer: +<%= question.correct_points %> Incorrect Answer: <%= question.incorrect_points > 0 ? '-' + question.incorrect_points : '0' %></h5>
+      
     </div>
     <div style="text-align:right;" class="col-md-4">
         <a class="btn btn-default" href="/questions"><span class="glyphicon glyphicon-th-list"></span> All Questions</a>
     </div>
 </div>
-<%
-if( !answer_allowed ) {
-    %>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="alert alert-info">
-                You have already submitted answer for this question. You cannot submit again. Please try the next question.
-            </div>
-        </div>
-    </div>
-    <%
-    }
-%>
 <div class="row" style="min-height: 300px;">
     <div class="col-md-12">
         <p class="lead">
@@ -73,7 +60,7 @@ if( !answer_allowed ) {
                             %>
                             <div class="radio">
                               <label>
-                                <input type="radio" <%= !answer_allowed ? 'disabled' : '' %> name="answer" id="answer" <%= question.choice[ i ].selected ? 'checked="true"' : '' %> value="<%= question.choice[ i ].value %>">
+                                <input class="mcqoption" type="radio" <%= !answer_allowed ? 'disabled' : '' %> name="answer" id="answer" <%= question.choice[ i ].selected ? 'checked="true"' : '' %> value="<%= question.choice[ i ].value %>">
                                 <%- map[ i ] + ') ' + question.choice[ i ].text %>
                               </label>
                             </div>
@@ -81,7 +68,9 @@ if( !answer_allowed ) {
                         }
                         %>
                         <br />
-                        <button type="submit" class="btn btn-default <%= !answer_allowed ? 'disabled' : '' %>"><span class="glyphicon glyphicon-flash"></span> Submit</button>
+                        <input type="hidden" name="cleared_response" id="cleared_response" value="false" />
+                        <input type="hidden" name="answer_submitted" id="answer_submitted" value="false" />
+                        <button class="btn btn-default btn-submit <%= !answer_allowed ? 'disabled' : '' %>"><span class="glyphicon glyphicon-ok"></span> Submit & Next</button>
                         <br /><br />
                         <input type="hidden" name="mfr_value" id="mfr_value" value="<%= mfr_value ? 'true' : 'false' %>" />
                         <input type="hidden" name="mfr_clicked" id="mfr_clicked" value="false" />
@@ -89,14 +78,20 @@ if( !answer_allowed ) {
                         if( answer_allowed ) {
                             if( mfr_value ) {
                               %>
-                              <button class="btn btn-warning btn-mfr-false"><span class="glyphicon glyphicon-eye-close"></span> Clear Review Status</button>
+                              <button class="btn btn-warning btn-mfr-false"><span class="glyphicon glyphicon-eye-close"></span> Unmark for Review & Next</button>
                               <%
                             }
                             else {
                               %>
-                              <button class="btn btn-primary btn-mfr-true"><span class="glyphicon glyphicon-eye-open"></span> Skip & Mark for Review</button>
-                              <%
+                              <button class="btn btn-default btn-mfr-true"><span class="glyphicon glyphicon-eye-open"></span> Mark for Review & Next</button>
+                              <%                              
                             }
+                        }
+                        if( has_answered ) {
+                            %>
+                            <br /><br />
+                            <button class="btn btn-default btn-clear-response"><span class="glyphicon glyphicon-remove"></span> Clear Response</button>
+                            <%
                         }
                         %>
                         <%
@@ -110,14 +105,29 @@ if( !answer_allowed ) {
 </div>
 <div class="row" style="margin-top:25px; border-top: 1px solid #EEEEEE; padding-top: 10px;">
     <div class="col-md-2">
-         <a href="/questions/<%= question_id - 1 %>" class="btn btn-default <%= qid_min == question_id - 1 ? 'disabled' : '' %>"><span class="glyphicon glyphicon-chevron-left"></span> Prev</a>
+         <a href="/questions/<%= question_id - 1 %>" class="btn btn-default <%= qid_min == question_id - 1 ? 'disabled' : '' %>"><span class="glyphicon glyphicon-chevron-left"></span> Previous</a>
     </div>
     <div class="col-md-2 col-md-offset-8"  style="text-align:right;">
         <a href="/questions/<%= question_id + 1 %>" class="btn btn-default  <%= qid_max == question_id - 1 ? 'disabled' : '' %>">Next <span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
 </div>
 <script type="text/javascript">
+var already_selected = <%= has_answered ? 'true' : 'false' %>;
 $( document ).ready( function( ){
+  $( ".btn-clear-response" ).click( function( e ){
+    $( "#answer_submitted" ).val( 'false' );
+    $( "#cleared_response" ).val( 'true' );
+    $( "#qform" ).submit( );
+  } );
+  $( ".btn-submit" ).click( function( e ) {
+    if( $( '#answer_submitted' ).val() === 'false' && !already_selected ) {
+        alert( 'Please select an option before submitting.' );
+        e.preventDefault( );
+    }
+  });
+  $( ".mcqoption" ).click( function( ){
+    $( '#answer_submitted' ).val( 'true' );    
+  } ); 
   $( ".btn-mfr-true" ).click( function( ){
     $( '#mfr_clicked' ).val( 'true' );
     $( '#mfr_value' ).val( 'true' );

@@ -5,6 +5,7 @@ var responseSchema = new mongoose.Schema({
     response_type: String,
     mfr_value: { type: Boolean, default: false },
     question_no: Number, // starts with 0
+    question_section: Number,
     response: String,
     correct: Boolean,
     score: Number,

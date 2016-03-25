@@ -64,49 +64,27 @@ exports.show_question = function( req, res ) {
         { sort: { created: 1 } },
         function( error, responses ){
             if( !error ) {
-                var answered_correctly = false, has_answered = false, answer_allowed = true;
-                var is_mfr = false, mfr_value = false, selected_option = -1;
+                var has_answered = false, answer_allowed = true;
+                var mfr_value = false, selected_option = -1;
                 var response_type;
 
-                if( responses ) {
+                if( responses.length > 0 ) {
                     responses.forEach( function( e ){
                         response_type = e.response_type;
+                        if( e.mfr_value ) {
+                          mfr_value = true;
+                        }  
                         if( e.response_type === 'answer' ) {
-                            has_answered = true;
+                            if( !!e.response ) {
+                                has_answered = true;
+                            }
                             if( question.type == '2' ) { // is MCQ
                                 selected_option = parseInt( e.response );
-                            }
-                            if( e.correct ) {
-                                answered_correctly = true;
-                            }
-                        }
-                        else if( e.response_type === 'review' ) {
-                            is_mfr = true;                            
-                            if( e.mfr_value ) {
-                              mfr_value = true;
-                            }                           
-                        }
+                            }                            
+                        }                        
                     } );
                 }
-
-                if( has_answered ) {
-                    // user has answered the question once
-
-                    if( !answered_correctly ) {
-                        // user has not answered the question correctly
-
-                        if( !question.multiple_responses ) {
-                            // this question can't have multiple responses
-                            answer_allowed = false;
-                        }
-
-                    }
-                    else {
-                        // user has already answered correctly
-                        answer_allowed = false;
-                    }
-
-                }
+                
                 for( var l = 0; l < question.choice.length; l++ ) {
                     if( selected_option === question.choice[ l ].value ) {
                         question.choice[ l ][ 'selected' ] = true;
@@ -120,6 +98,7 @@ exports.show_question = function( req, res ) {
                 if( question.type == '2' ) {
                     question.choice = shuffle( question.choice );
                 }
+
                 return res.render( 'question_page',{
                     path: '/questions',
                     title: commons.quiz_name + ' | Question ' + question_id,
@@ -128,6 +107,7 @@ exports.show_question = function( req, res ) {
                     qid_min: qid_min,
                     question: question,
                     answer_allowed: answer_allowed,
+                    has_answered: has_answered,
                     selected_option: selected_option,
                     response_type: response_type,
                     mfr_value: mfr_value,
@@ -166,96 +146,66 @@ exports.validate_answer = function( req, res ) {
         answer = validator.trim( req.body.answer).toLowerCase(),
         user_id = req.session.u[ 0 ],
         mfr_clicked = req.body.mfr_clicked,
-        mfr_value = req.body.mfr_value;
+        mfr_value = req.body.mfr_value,
+        answer_submitted = req.body.answer_submitted,
+        cleared_response = req.body.cleared_response;
 
     if( !question_id || question_id < qid_min + 1 || question_id > qid_max + 1 ) {
         console.log( "Invalid question" );
         return commons.flash_and_redirect( 'danger', 'Question not found.', '/questions', res, req );
     }
 
-    if( mfr_clicked === 'false' ) {    
-        if( !answer ) {
-            //console.log( "Empty answer yo" );
-            return commons.flash_and_redirect( 'danger', 'Please type an answer before submitting.', '/questions/' + question_id, res, req );
-        }
-    }
+    if( answer_submitted === 'true' && !answer ) {
+        //console.log( "Empty answer yo" );
+        return commons.flash_and_redirect( 'danger', 'Please type an answer before submitting.', '/questions/' + question_id, res, req );
+    }    
 
     Response.find( { user_id: user_id, question_no: question_id - 1 }, function( error, responses ){
         if( !error ) {
             var question = questions[ question_id - 1 ];
             var prior_response_id = '';
             if( responses.length > 0 ) {
-                // we have prior responses... check if any of it was correct!
-                var answered_already = false, answered_correctly = false;
+                // we have prior responses...
                 responses.forEach( function( e ){
-                    prior_response_id = e._id;
-                    if( e.response_type === 'answer' ) {                    
-                        answered_already = true;
-                        if( e.correct ) {
-                            // user had already submitted a correct answer for this question...
-                            // cannot accept answer again
-                            answered_correctly = true;
-                        }
-                    }
-                });
-                if( answered_already ) {
-                    // user had already answered this question before
-                    // and is answering again
-                    if( answered_correctly ) {
-                        // and user had answered correctly the last time
-                        // console.log( 'correct answer resubmitted. no points awarded yo' );
-                        return commons.flash_and_redirect( 'warning', 'You have already submitted correct answer for this question. No points were awarded.', '/questions', res, req );
-                    }
-                    else {
-                        // and user had not answered correctly the last time
-                        if( !question.multiple_responses ) {
-                            // and this question does not allow multiple submissions
-                            // so exit giving an error!
-                            // console.log( 'question does not allow multiple answers.. exiting' );
-                            return commons.flash_and_redirect( 'danger', 'You cannot submit answer for this question again.', '/questions', res, req );
-                        }
-                    }
-                }
+                    prior_response_id = e._id;                   
+                });                
             }
 
+            if( cleared_response === 'true' ) {
+                add_response( prior_response_id, user_id, question_id - 1, question.section, null, null, null, req, true, false );
+                return res.redirect( get_next_question_path( question_id - 1 ) );        
+            }
+
+            var correct_answer = false, answer_points = 0;
+
+            // MFR was turned on
             if( mfr_clicked === 'true' ) {
-                add_response( prior_response_id, user_id, question_id - 1, null, null, null, req, mfr_value === 'true' );
-                return res.redirect( get_next_question_path( question_id ) );
-            }
-
-            if( question.answer == answer ) {               
-
-                add_response( prior_response_id, user_id, question_id - 1, answer, true, question.correct_points, req );
-                increment_score( user_id, question.correct_points, question.section, req );
-
-                if( commons.quiz_type == 'wizard' ) {
-                    // if the quiz is of wizard type, don't notify about the answer type... and redirect to next question
-                    return res.redirect( get_next_question_path( question_id ) );
-                }
-                else {
-                    // if the quiz is of classic type, notify about the answer type... and redirect to the questions dashboard
-                    return commons.flash_and_redirect( 'success', 'Your answer was correct.', '/questions', res, req );
-                }
-
+                mfr_clicked = true;              
+                mfr_value = mfr_value === 'true';
             }
             else {
-                // incorrect answer.. but add to record anyway!
-                add_response( prior_response_id, user_id, question_id - 1, answer, false, question.incorrect_points, req );
+                mfr_clicked = false;
+                mfr_value = null;
+            }
 
-                // do negative marking if this question has it!
-                if( question.incorrect_points != null && question.incorrect_points > 0 ) {
-                    increment_score( user_id, 0 - question.incorrect_points, question.section, req )
+            // ANSWER was submitted
+            if( answer_submitted === 'true' ) {
+                answer_submitted = true;
+                if( question.answer == answer ) {
+                    correct_answer = true;               
+                    answer_points = question.correct_points;
                 }
-                // console.log( "incorrect answer man. try again" );
-
-                if( commons.quiz_type == 'wizard' ) {
-                    // if quiz is of wizard type, then don't consider multiple responses
-                    return res.redirect( get_next_question_path( question_id ) );
-                }
-                else {
-                    return commons.flash_and_redirect( 'warning', 'Incorrect answer.', question.multiple_responses ? '/questions/' + question_id : '/questions', res, req );
-                }
-            }            
+            }
+            else {
+                answer_submitted = false;
+                answer = null;
+                correct_answer = null;
+                answer_points = null;
+            }           
+            
+            // MFR was not turned on
+            add_response( prior_response_id, user_id, question_id - 1, question.section, answer, correct_answer, answer_points, req, answer_submitted, mfr_clicked, mfr_value );
+            return res.redirect( get_next_question_path( question_id ) );        
         }
         console.log( "unexpected error occurred" );
         return commons.flash_and_redirect( 'danger', 'Unexpected error occurred. Please try again.', '/questions/' + question_id, res, req );
@@ -363,63 +313,63 @@ function update_last_submission( user_id, req ) {
     User.findOneAndUpdate( { user_id: user_id }, { last_submission: req.session.ls, last_change_in: last_change_in }).exec();
 }
 
-function add_response( prior_response_id, user_id, question_no, response, correct, score, req, mfr_value ) {
+function add_response( prior_response_id, user_id, question_no, question_section, response, correct, score, req, answer_submitted, mfr_clicked, mfr_value ) {
 
-    var mfr_at_all = typeof mfr_value !== 'undefined';
     var to_update = false;
+    var response_object = { };
 
     if( !!prior_response_id ) {
         to_update = true;
     }
 
-    if( mfr_at_all ) {
-        if( to_update ) {
-            Response.update( { _id: prior_response_id }, {
-                mfr_value: mfr_value
-            } ).exec( );
+    if( to_update ) {
+        if( answer_submitted ) {
+            response_object = {
+                response_type: 'answer',
+                response: response,
+                correct: correct,
+                score: score,
+                updated: Date.now( )
+            };
+        }
+        if( mfr_clicked ) {
+            response_object[ 'mfr_value' ] = mfr_value;            
+        }
+        Response.update( { "_id": prior_response_id }, response_object ).exec( );
+    }
+    else {
+        if( answer_submitted ) {
+            response_object = {
+                response_type: 'answer',
+                user_id: user_id,
+                question_no: question_no,
+                question_section: question_section,
+                response: response,
+                correct: correct,
+                score: score,
+                created: Date.now( )
+            };
+            if( mfr_clicked ) {
+                response_object[ 'mfr_value' ] = mfr_value;
+            }
         }
         else {
-            Response.create( {
+            response_object = {
               response_type: 'review',
               user_id: user_id,
               question_no: question_no,
-              mfr_value: mfr_value,
+              question_section: question_section,
+              mfr_value: true,
               response: null,
               correct: null,
               score: null,
-              created: null
-          } );
-        }      
-      return;
+              created: Date.now( )
+            }
+        }
+        Response.create( response_object );
     }
 
-    if( !user_id || ( question_no < qid_min && question_no > qid_max ) || !response ) {
-        console.trace( 'incorrect response params' );
-        return;
-    }
-
-    if( to_update ) {
-        Response.update( { "_id": prior_response_id }, {
-            response_type: 'answer',
-            response: response,
-            correct: correct,
-            score: score,
-            updated: Date.now( )
-        } ).exec( );
-    }
-    else {
-        Response.create( {
-            response_type: 'answer',
-            user_id: user_id,
-            question_no: question_no,
-            response: response,
-            correct: correct,
-            score: score,
-            created: Date.now()
-        } );
-    }
     update_last_submission( user_id, req );
-
 }
 
 function get_empty_question_status( ) {
