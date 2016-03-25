@@ -3,8 +3,11 @@
     <div class="col-md-3">
         <h4>Section: <strong><%= section %></strong></h4>
     </div>
-    <div class="col-md-5">
+    <div class="col-md-2">
          <h4>Question #<%= question_id %></h4>
+    </div>
+    <div class="col-md-3">
+      <h4><%- display_answer ? '<strong><em>Answer: ' + answer + '</em></strong>' : '' %></h4>
     </div>
     <div style="text-align:right;" class="col-md-4">
         <a class="btn btn-default" href="/questions"><span class="glyphicon glyphicon-th-list"></span> All Questions</a>
@@ -61,7 +64,19 @@
                             <div class="radio">
                               <label>
                                 <input class="mcqoption" type="radio" <%= !answer_allowed ? 'disabled' : '' %> name="answer" id="answer" <%= question.choice[ i ].selected ? 'checked="true"' : '' %> value="<%= question.choice[ i ].value %>">
-                                <%- map[ i ] + ') ' + question.choice[ i ].text %>
+                                <%- map[ i ] + ') ' %> 
+                                <%
+                                if( display_answer && question.choice[ i ].correct )  {
+                                  %>
+                                  <span class="text-success answer"><strong><%= question.choice[ i ].text %></strong></span>
+                                  <%
+                                }
+                                else {
+                                  %>
+                                  <%= question.choice[ i ].text %>
+                                  <%
+                                }
+                                %>
                               </label>
                             </div>
                             <%
@@ -69,13 +84,15 @@
                         %>
                         <br />
                         <input type="hidden" name="cleared_response" id="cleared_response" value="false" />
-                        <input type="hidden" name="answer_submitted" id="answer_submitted" value="false" />
-                        <button class="btn btn-default btn-submit <%= !answer_allowed ? 'disabled' : '' %>"><span class="glyphicon glyphicon-ok"></span> Submit & Next</button>
-                        <br /><br />
+                        <input type="hidden" name="answer_submitted" id="answer_submitted" value="false" />                    
                         <input type="hidden" name="mfr_value" id="mfr_value" value="<%= mfr_value ? 'true' : 'false' %>" />
                         <input type="hidden" name="mfr_clicked" id="mfr_clicked" value="false" />
                         <%
                         if( answer_allowed ) {
+                            %>
+                            <button class="btn btn-default btn-submit <%= !answer_allowed ? 'disabled' : '' %>"><span class="glyphicon glyphicon-ok"></span> Submit & Next</button>
+                            <br /><br />
+                            <%
                             if( mfr_value ) {
                               %>
                               <button class="btn btn-warning btn-mfr-false"><span class="glyphicon glyphicon-eye-close"></span> Unmark for Review & Next</button>
@@ -87,7 +104,7 @@
                               <%                              
                             }
                         }
-                        if( has_answered ) {
+                        if( answer_allowed && has_answered ) {
                             %>
                             <br /><br />
                             <button class="btn btn-default btn-clear-response"><span class="glyphicon glyphicon-remove"></span> Clear Response</button>
@@ -111,6 +128,12 @@
         <a href="/questions/<%= question_id + 1 %>" class="btn btn-default  <%= qid_max == question_id - 1 ? 'disabled' : '' %>">Next <span class="glyphicon glyphicon-chevron-right"></span></a>
     </div>
 </div>
+<style type="text/css">
+.answer {
+  font-weight: bolder;
+  font-size: 18px;
+}
+</style>
 <script type="text/javascript">
 var already_selected = <%= has_answered ? 'true' : 'false' %>;
 $( document ).ready( function( ){

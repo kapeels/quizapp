@@ -24,11 +24,11 @@ commons.menu = [
     { label: 'Forgot Password', glyph: 'info-sign', path: '/forgot_password',
         show: { logged_in: false, logged_out: true, remote: true, local: false } },
 
-    { label: 'Start Test', glyph: 'play', path: '/start',
+    { label: 'Start Exam', glyph: 'play', path: '/start',
         show: { logged_in: true, logged_out: false, remote: true, local: true } },
 
-    //{ label: 'Submit Test', glyph: 'stop', path: '/submit',
-      //  show: { logged_in: true, logged_out: false, remote: true, local: true } },
+    { label: 'Submit Exam', glyph: 'stop', path: '/submit',
+        show: { logged_in: true, logged_out: false, remote: true, local: true } },
 
     { label: 'Log Out', glyph: 'log-out', path: '/logout',
         show: { logged_in: true, logged_out: false, remote: true, local: true } },
@@ -40,7 +40,7 @@ commons.menu = [
         show: { logged_in: true, logged_out: true, remote: true, local: false } }
 ];
 
-commons.quiz_duration = 30000; // in minutes
+commons.quiz_duration = 3; // in minutes
 // year, month = 0 for jan and 11 for dec, day, hours, minutes, seconds
 commons.quiz_starts_at = new Date( 2015, 2 , 12, 11, 0 ).getTime();
 //commons.quiz_starts_at = new Date( 2015, 1 , 26, 10, 30 ).getTime();

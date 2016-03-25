@@ -15,7 +15,7 @@ var userSchema = new mongoose.Schema({
     last_change_in: { type: Number, default: 0 },
     last_submission: { type: Date, default: null },
     started_at: { type: Date, default: null },
-    quiz_completed: Boolean,
+    quiz_completed: { type: Boolean, default: false },
     quiz_completed_at: Date
 });
 // last_change_in

@@ -63,7 +63,7 @@
                    %>
                     <li<%- path == menu[ i ].path ? ' class="active"' : ''  %>>
                         <%
-                        if( menu[ i ].path === '/submits' ) {
+                        if( menu[ i ].path === '/submit' ) {
                           %>
                           <a onclick="return confirm('WARNING: You cannot undo this action. \n\n Click OK to SUBMIT YOUR TEST or Cancel to go back.');" href="<%- menu[ i ].path %>"><span class="glyphicon glyphicon-<%- menu[ i ].glyph %>"></span> <%- menu[ i ].label %></a>
                           <%

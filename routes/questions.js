@@ -66,7 +66,14 @@ exports.show_question = function( req, res ) {
             if( !error ) {
                 var has_answered = false, answer_allowed = true;
                 var mfr_value = false, selected_option = -1;
-                var response_type;
+                var response_type, display_answer = false;
+
+                if( !commons.is_under_time_limit( req.session.sa ) ||
+                    req.session.is_completed === true
+                 ) {
+                    answer_allowed = false;
+                    display_answer = true;
+                }
 
                 if( responses.length > 0 ) {
                     responses.forEach( function( e ){
@@ -84,8 +91,22 @@ exports.show_question = function( req, res ) {
                         }                        
                     } );
                 }
+
+                var answer = '<span class="text-danger">Incorrect</span>';
+                if( question.answer === selected_option ) {
+                    answer = '<span class="text-success">Correct</span>';
+                }
                 
                 for( var l = 0; l < question.choice.length; l++ ) {
+                    // set the correct answer in the choice
+                    if( question.choice[ l ].value === question.answer ) {
+                       question.choice[ l ][ 'correct' ] = true;
+                    }
+                    else {
+                       question.choice[ l ][ 'correct' ] = false;
+                    }
+
+                    // set the selected answer in the choice
                     if( selected_option === question.choice[ l ].value ) {
                         question.choice[ l ][ 'selected' ] = true;
                     }
@@ -107,6 +128,8 @@ exports.show_question = function( req, res ) {
                     question: question,
                     section: commons.quiz_sections[ question.section ].name,
                     answer_allowed: answer_allowed,
+                    display_answer: display_answer,
+                    answer: answer,
                     has_answered: has_answered,
                     selected_option: selected_option,
                     response_type: response_type,
@@ -243,11 +266,11 @@ exports.start_quiz = function( req, res ) {
         req.session.sa = Date.now();
 
         // started the quiz.. redirect user to question #1
-        return commons.flash_and_redirect( 'success', 'Your quiz has started!', '/questions/1', res, req );
+        return commons.flash_and_redirect( 'success', 'Your exam has started!', '/questions/1', res, req );
     }
     else {
         // user has already started the quiz.. cannot start again!
-        return commons.flash_and_redirect( 'warning', 'Your quiz has already started.', '/questions', res, req );
+        return commons.flash_and_redirect( 'warning', 'Your exam has already started.', '/questions', res, req );
     }
 
 }
@@ -260,29 +283,59 @@ exports.stop_quiz = function( req, res ) {
         User.findOneAndUpdate( { user_id: user_id }, { quiz_completed_at: Date.now(), quiz_completed: true } ).exec();
         req.session.is_completed = true;
 
-        // started the quiz.. redirect user to question #1
-        return commons.flash_and_redirect( 'info', 'Your test has been submitted!', '/questions', res, req );
+        // stopped the quiz.. redirect user to dashboard
+        return commons.flash_and_redirect( 'info', 'Your exam has been submitted!', '/questions', res, req );
     }
     else {
         // user has already stopped the quiz.. cannot stop again!
-        return commons.flash_and_redirect( 'warning', 'Your test has already been submitted.', '/questions', res, req );
+        return commons.flash_and_redirect( 'warning', 'Your exam has already been submitted.', '/questions', res, req );
     }
 
 }
 
-exports.must_be_within_time_limit = function( req, res, next ) {
+exports.exam_must_be_over = function( req, res, next ) {
+    // the exam is under time limit
+    if( commons.is_under_time_limit( req.session.sa ) ) {
+        // and has been submitted manually
+        if( req.session.is_completed === true ) {
+            // hence, is over!
+            next( );
+            return;
+        }
+    }
+    // is not under time limit
+    else {
+        // hence, is over!
+        next( );
+        return;
+    }
+    
+    return commons.flash_and_redirect( 'danger', 'Your exam is not over yet.', '/questions', res, req );
+}
+
+exports.exam_must_be_started = function( req, res, next ) {
+
     if( req.session.sa == null ) {
         // user hasn't started the quiz yet
         return commons.flash_and_redirect( 'danger', 'You should start the quiz before viewing the questions!', '/start' ,res, req );
     }
-    else {
-        // user has started the quiz
-        if( !commons.is_under_time_limit( req.session.sa ) ) {
-            // and his/her time is over
-            return commons.flash_and_redirect( 'danger', 'Your time is over.', '/questions', res, req );
-        }
-    }
+
     next();
+}
+
+exports.exam_must_not_be_over = function( req, res, next ) {
+
+    // the exam is under time limit
+    if( commons.is_under_time_limit( req.session.sa ) ) {
+        // and has not been submitted manually
+        if( req.session.is_completed !== true ) {
+            // hence, is not yet over!
+            next( );
+            return;
+        }
+    }   
+
+    return commons.flash_and_redirect( 'danger', 'Your time is over.', '/questions', res, req );    
 }
 
 function increment_score( user_id, score, question_section, req ) {
