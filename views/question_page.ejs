@@ -73,7 +73,7 @@ if( !answer_allowed ) {
                             %>
                             <div class="radio">
                               <label>
-                                <input type="radio" <%= !answer_allowed ? 'disabled' : '' %> name="answer" id="answer" value="<%= question.choice[ i ].value %>">
+                                <input type="radio" <%= !answer_allowed ? 'disabled' : '' %> name="answer" id="answer" <%= question.choice[ i ].selected ? 'checked="true"' : '' %> value="<%= question.choice[ i ].value %>">
                                 <%- map[ i ] + ') ' + question.choice[ i ].text %>
                               </label>
                             </div>
@@ -83,8 +83,22 @@ if( !answer_allowed ) {
                         <br />
                         <button type="submit" class="btn btn-default <%= !answer_allowed ? 'disabled' : '' %>"><span class="glyphicon glyphicon-flash"></span> Submit</button>
                         <br /><br />
-                        <input type="hidden" name="mfr" id="mfr" value="false" />
-                        <button class="btn btn-primary btn-mfr"><span class="glyphicon glyphicon-eye-open"></span> Skip & Mark for Review</button>
+                        <input type="hidden" name="mfr_value" id="mfr_value" value="<%= mfr_value ? 'true' : 'false' %>" />
+                        <input type="hidden" name="mfr_clicked" id="mfr_clicked" value="false" />
+                        <%
+                        if( answer_allowed ) {
+                            if( mfr_value ) {
+                              %>
+                              <button class="btn btn-warning btn-mfr-false"><span class="glyphicon glyphicon-eye-close"></span> Clear Review Status</button>
+                              <%
+                            }
+                            else {
+                              %>
+                              <button class="btn btn-primary btn-mfr-true"><span class="glyphicon glyphicon-eye-open"></span> Skip & Mark for Review</button>
+                              <%
+                            }
+                        }
+                        %>
                         <%
                     }
                     %>
@@ -104,8 +118,14 @@ if( !answer_allowed ) {
 </div>
 <script type="text/javascript">
 $( document ).ready( function( ){
-  $( ".btn-mfr" ).click( function( ){
-    $( '#mfr' ).val( 'true' );
+  $( ".btn-mfr-true" ).click( function( ){
+    $( '#mfr_clicked' ).val( 'true' );
+    $( '#mfr_value' ).val( 'true' );
+    $( '#qform' ).submit( );
+  } );
+  $( ".btn-mfr-false" ).click( function( ){
+    $( '#mfr_clicked' ).val( 'true' );
+    $( '#mfr_value' ).val( 'false' );
     $( '#qform' ).submit( );
   } );
 } );

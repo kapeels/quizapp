@@ -98,7 +98,6 @@ exports.registration_process = function( req, res ) {
     }
 
     return exports.register_user( name, college, phone, email, function( error, user ){
-      console.log(error);
         if( error ) {
             console.log( 'cannot insert user to database.' );
             return commons.flash_and_redirect( 'warning', 'Unexpected error occurred. Please try again later.', '/register', res, req );
