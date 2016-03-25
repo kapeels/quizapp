@@ -43,6 +43,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: '1',
 	choice: new Array(
         { text: "t", value: 1 },
@@ -60,6 +61,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 3,
     choice: new Array(
         { text: "V.B. is partially filled with electrons", value: 1 },
@@ -77,6 +79,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points:0,
     multiple_responses: false,
+section: 0,
     answer: 2,
     choice: new Array(
         { text: "(2/5) MR²", value: 1 },
@@ -94,6 +97,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 4,
     choice: new Array(
         { text: "2 mA", value: 1 },
@@ -111,6 +115,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 1,
     choice: new Array(
         { text: "e/m", value: 1 },
@@ -129,6 +134,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 3,
     choice: new Array(
         { text: "have finite volume", value: 1 },
@@ -147,6 +153,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 4,
     choice: new Array(
         { text: "KA < KB / 2", value: 1 },
@@ -164,6 +171,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 1,
     choice: new Array(
         { text: "3RC/27", value: 1 },
@@ -181,6 +189,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 3,
     choice: new Array(
         { text: "stationary magnetic field", value: 1 },
@@ -198,6 +207,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 1,
     choice: new Array(
         { text: "2 πr", value: 1 },
@@ -215,6 +225,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 2,
     choice: new Array(
         { text: "1 / Kl₁ (2l + l₁ )", value: 1 },
@@ -232,6 +243,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 3,
     choice: new Array(
         { text: "f /2", value: 1 },
@@ -249,6 +261,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 3,
     choice: new Array(
         { text: "N°", value: 1 },
@@ -266,6 +279,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 2,
     choice: new Array(
         { text: "∈₀E(R/r)²", value: 1 },
@@ -283,6 +297,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 4,
 	choice: new Array(
         { text: "1 second", value: 1 },
@@ -300,6 +315,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 3,
     choice: new Array(
         { text: "A.	sin⁻ ¹ (5T / t)", value: 1 },
@@ -317,6 +333,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 1,
     choice: new Array(
         { text: "1 > n2 > n3", value: 1 },
@@ -338,6 +355,7 @@ The average power dissipated in the circuit will be',
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 1,
     choice: new Array(
         { text: "100W", value: 1 },
@@ -355,6 +373,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 3,
     choice: new Array(
         { text: "15°", value: 1 },
@@ -372,6 +391,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 3,
     choice: new Array(
         { text: "increases", value: 1 },
@@ -389,6 +409,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 1,
     choice: new Array(
         { text: "σ(R + r) / ∈₀ ", value: 1 },
@@ -406,6 +427,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 2,
     choice: new Array(
         { text: "0.25 × 10⁻² N/m² ", value: 1 },
@@ -423,6 +445,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 3,
     choice: new Array(
         { text: "e – 1 /2", value: 1 },
@@ -441,6 +464,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 3,
     choice: new Array(
         { text: "BR³ / 2πµ₀", value: 1 },
@@ -459,6 +483,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 2,
     choice: new Array(
         { text: "V/µg", value: 1 },
@@ -477,6 +502,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 1,
     choice: new Array(
         { text: "q²/8π ∈₀a ", value: 1 },
@@ -495,6 +521,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 4,
     choice: new Array(
         { text: "6 V", value: 1 },
@@ -512,6 +539,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 1,
     choice: new Array(
         { text: "[L⁰ M⁰ T⁰]", value: 1 },
@@ -530,6 +558,7 @@ zero. (Radius of earth = 6400 km, gravitational acceleration at poles = 10 m /s�
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 3,
     choice: new Array(
         { text: "7.8 × 10⁻ ² rad/s", value: 1 },
@@ -548,6 +577,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 2,
     choice: new Array(
         { text: "m2/m1", value: 1 },
@@ -566,6 +596,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 3,
     choice: new Array(
         { text: "4π/3", value: 1 },
@@ -583,6 +614,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 1,
     choice: new Array(
         { text: "12.2 N", value: 1 },
@@ -601,6 +633,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 2,
     choice: new Array(
         { text: "V ", value: 1 },
@@ -619,6 +652,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 2,
     choice: new Array(
         { text: "GMm/11R", value: 1 },
@@ -636,6 +670,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 3,
     choice: new Array(
         { text: "25 : 1: 125", value: 1 },
@@ -653,6 +688,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 4,
     choice: new Array(
         { text: "high susceptibility and low retentivity ", value: 1 },
@@ -674,6 +710,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 2,
     choice: new Array(
         { text: "b = ac", value: 1 },
@@ -693,6 +730,7 @@ F = x√d . The dimensions of x are ',
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 1,
     choice: new Array(
         { text: "A.	[L⁻½M³/² T ⁻² ]", value: 1 },
@@ -711,6 +749,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 4,
     choice: new Array(
         { text: "A.	AB+ AC/2", value: 1 },
@@ -731,6 +770,7 @@ satellite is',
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 2,
     choice: new Array(
         { text: "gx", value: 1 },
@@ -748,6 +788,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 1,
     choice: new Array(
         { text: "high emf is induced across the coil", value: 1 },
@@ -765,6 +806,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 2,
     choice: new Array(
         { text: "plateplate voltage and plate current at constant grid voltage", value: 1 },
@@ -782,6 +824,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer:4 ,
     choice: new Array(
         { text: "emitter−base junction is forward biased and collector−base junction is reverse biased", value: 1 },
@@ -799,6 +842,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 3,
     choice: new Array(
         { text: "1.86 N", value: 1 },
@@ -817,6 +861,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 1,
     choice: new Array(
         { text: "Isothermal change ", value: 1 },
@@ -834,6 +879,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 4,
     choice: new Array(
         { text: "is halved", value: 1 },
@@ -851,6 +897,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 2,
     choice: new Array(
         { text: "the breadth of the beam is large. ", value: 1 },
@@ -868,6 +915,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 4,
     choice: new Array(
         { text: "carrier amplitude = signal amplitude ", value: 1 },
@@ -885,6 +933,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 3,
     choice: new Array(
         { text: "395 Ω", value: 1 },
@@ -902,6 +951,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 0,
     answer: 2,
     choice: new Array(
         { text: "phase of SHM of particles at any time is same, between two successive nodes. ", value: 1 },
@@ -919,6 +969,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 3,
     choice: new Array(
         { text: "25 kg-m2", value: 1 },
@@ -936,6 +987,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 2,
     choice: new Array(
         { text: "0.13′′", value: 1 },
@@ -954,6 +1006,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 1,
     choice: new Array(
         { text: "time required for complete disintegration of radioactive substance. ", value: 1 },
@@ -971,6 +1024,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 3,
     choice: new Array(
         { text: "each point on the wavefront is in different phase. ", value: 1 },
@@ -988,6 +1042,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 2,
     choice: new Array(
         { text: "mass of electron", value: 1 },
@@ -1005,6 +1060,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 2,
     choice: new Array(
         { text: "180 cm", value: 1 },
@@ -1022,6 +1078,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 4,
     choice: new Array(
         { text: "58sin -1 (n)", value: 1 },
@@ -1039,6 +1096,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 1,
     choice: new Array(
         { text: "Energy, momentum and mass ", value: 1 },
@@ -1056,6 +1114,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 3,
     choice: new Array(
         { text: "The e.m.f of the battery becomes equal to the e.m.f of the experimental cell. ", value: 1 },
@@ -1073,6 +1132,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 2,
     choice: new Array(
         { text: "4:1", value: 1 },
@@ -1090,6 +1150,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 1,
     choice: new Array(
         { text: "the magnitude of the induced e.m.f. ", value: 1 },
@@ -1107,6 +1168,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 2,
     choice: new Array(
         { text: "λ= π yo/4", value: 1 },
@@ -1124,6 +1186,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 4,
     choice: new Array(
         { text: "√x", value: 1 },
@@ -1141,6 +1204,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 2,
     choice: new Array(
         { text: "no work is done on it. ", value: 1 },
@@ -1158,6 +1222,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 1,
     choice: new Array(
         { text: "a straight line", value: 1 },
@@ -1175,6 +1240,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 3,
     choice: new Array(
         { text: "16 × 10−4  C", value: 1 },
@@ -1192,6 +1258,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 2,
     choice: new Array(
         { text: "when it is stationary. ", value: 1 },
@@ -1209,6 +1276,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 2,
     choice: new Array(
         { text: "the mass of the body. ", value: 1 },
@@ -1226,6 +1294,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 3,
     choice: new Array(
         { text: "The valence band is partially filled with electrons. ", value: 1 },
@@ -1243,6 +1312,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 2,
     choice: new Array(
         { text: "gx", value: 1 },
@@ -1260,6 +1330,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 3,
     choice: new Array(
         { text: "x = 0, λ, 2λ, 3λ, …., nλ ", value: 1 },
@@ -1276,6 +1347,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 4,
     choice: new Array(
         { text: "40 kg-wt", value: 1 },
@@ -1293,6 +1365,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 1,
     choice: new Array(
         { text: "1:1", value: 1 },
@@ -1310,6 +1383,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 2,
     choice: new Array(
         { text: "decrease. ", value: 1 },
@@ -1327,6 +1401,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 1,
     answer: 3,
     choice: new Array(
         { text: "(287/4)4", value: 1 },
@@ -1344,6 +1419,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 4,
     choice: new Array(
         { text: "its an imaginary surface. ", value: 1 },
@@ -1362,6 +1438,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 2,
     choice: new Array(
         { text: "T.N.E.I = q1 + q 2 + q3 /2ε0", value: 1 },
@@ -1379,6 +1456,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 4,
     choice: new Array(
         { text: "IE = – 1 mA, IB = 9 mA ", value: 1 },
@@ -1396,6 +1474,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 1,
     choice: new Array(
         { text: "Bottom point B", value: 1 },
@@ -1413,6 +1492,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 3,
     choice: new Array(
         { text: "2.121 A", value: 1 },
@@ -1431,6 +1511,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 4,
     choice: new Array(
         { text: "the external force causes different strains. ", value: 1 },
@@ -1449,6 +1530,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 1,
     choice: new Array(
         { text: "Energy and linear momentum. ", value: 1 },
@@ -1466,6 +1548,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 2,
     choice: new Array(
         { text: "more energetic than", value: 1 },
@@ -1484,6 +1567,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 3,
     choice: new Array(
         { text: "A satellite cannot move in a stable orbit in a plane passing through the earth’s centre. ", value: 1 },
@@ -1502,6 +1586,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 1,
     choice: new Array(
         { text: "1215.4 Å", value: 1 },
@@ -1520,6 +1605,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 4,
     choice: new Array(
         { text: "the fringes will disappear. ", value: 1 },
@@ -1538,6 +1624,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 3,
     choice: new Array(
         { text: "I1 : I2 = 1 : 1 ", value: 1 },
@@ -1556,6 +1643,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 2,
     choice: new Array(
         { text: "LEDs", value: 1 },
@@ -1574,6 +1662,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 4,
     choice: new Array(
         { text: "2.5 J", value: 1 },
@@ -1592,6 +1681,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 1,
     choice: new Array(
         { text: "104 µ0", value: 1 },
@@ -1610,6 +1700,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 3,
     choice: new Array(
         { text: "force", value: 1 },
@@ -1628,6 +1719,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 2,
     choice: new Array(
         { text: "59π/900 rad / s", value: 1 },
@@ -1647,6 +1739,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 4,
     choice: new Array(
         { text: "YALt2/ 2 ", value: 1 },
@@ -1667,6 +1760,7 @@ tone emitted by the wire will be of frequency',
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 4,
     choice: new Array(
         { text: "c", value: 1 },
@@ -1687,6 +1781,7 @@ to move between two points 12.5 cm on either side of the mean position is',
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 1,
     choice: new Array(
         { text: "0.6 s ", value: 1 },
@@ -1706,6 +1801,7 @@ when it passes a stationary observer. If the speed of sound in air is 350 m/s th
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 3,
     choice: new Array(
         { text: "35 m/s ", value: 1 },
@@ -1724,6 +1820,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 4,
     choice: new Array(
         { text: "(2MR^2)/3+ (Ml^2)/12", value: 1 },
@@ -1743,6 +1840,7 @@ mean position to half the maximum displacement is (sin30°= 0.5)',
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 1,
     choice: new Array(
         { text: "T/2", value: 1 },
@@ -1761,6 +1859,7 @@ questions.push( {
     correct_points: 1,
     incorrect_points: 0,
     multiple_responses: false,
+section: 2,
     answer: 4,
     choice: new Array(
         { text: "[M0 L1 T–3 K–4] ", value: 1 },
@@ -1798,6 +1897,7 @@ questions.push( {
     incorrect_points: 0,
     answer: 'sample3',
     multiple_responses: false,
+section: 0,
     additional_text: 'The answer for this question is sample3.'
 } );
 
@@ -1830,9 +1930,5 @@ questions.push( {
         { text: "Choice D", value: 4 }
     )
 } );*/
-
-for( var k = 0; k < questions.length; k++ ) {
-  questions[ k ].section = 0;
-}
 
 module.exports = questions;

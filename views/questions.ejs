@@ -2,8 +2,6 @@
 <div class="row">
     <div class="page-header col-md-12">
         <div class="row-fluid">
-            <h4 class="col-md-6"><!--Your Score: <strong class="text-info"><%= score %>--></strong></h3>
-            <h4 class="col-md-6" style="text-align:right;">Last Submission: <strong class="text-success"><%= last_submission %></strong></h3>
         </div>
     </div>
 </div>
@@ -21,9 +19,14 @@ if( !can_solve ) {
 }
 %>
 <%
+var statuses = {
+    0: "<span class='text-success'><strong>Answered</strong></span>",
+    1: "<span class='text-primary'><strong>Unanswered</strong></span>",
+    2: "<span class='text-info'><strong>Answered & Marked for Review</strong></span>",
+    3: "<span class='text-warning'><strong>Marked for Review</strong></span>"
+}
 for( var j = 0; j < sections.length; j++ ) {
   %>
-  <div class="row">
       <div class="col-md-6">
         <h4>Section: <%= sections[ j ].name %></h4>
           <table class="table table-bordered">
@@ -43,31 +46,14 @@ for( var j = 0; j < sections.length; j++ ) {
                   %>
                       <tr>
                           <td><%= i+1 %></td>
-                          <td><%= questions[ i ].completed_at %></td>
-                          <%
-                          if( questions[ i ].complete ) {
-                              %>
-                              <td><a href="#" onclick="return false;" class="btn btn-info btn-mini disabled"><span class="glyphicon glyphicon-hand-up"></span> Solved</a></td>
-                              <%
-                          }
-                          else if( questions[ i ].attempted && !questions[ i ].multiple_responses ) {
-                              %>
-                              <td><a href="#" onclick="return false;" class="btn btn-info btn-mini disabled"><span class="glyphicon glyphicon-hand-up"></span> Solved</a></td>
-                              <%
-                          }
-                          else {
-                              %>
-                              <td><a href="/questions/<%= i+1 %>" class="btn btn-primary btn-mini <%= !can_solve ? 'disabled' : '' %>"><span class="glyphicon glyphicon-plane"></span> Solve</a></td>
-                              <%
-                          }
-                          %>
+                          <td><%- statuses[ questions[ i ].status ] %></td>
+                          <td><a href="/questions/<%= i+1 %>" class="btn btn-primary btn-mini "><span class="glyphicon glyphicon-plane"></span> Visit</a></td>                             
                       </tr>
                   <% } %>
 
               </tbody>
           </table>
       </div>
-  </div>
   <%
 }
 %>

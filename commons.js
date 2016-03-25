@@ -61,6 +61,12 @@ commons.email_from_string = '';
 commons.mongodb_uri = 'mongodb://root@localhost/quizapp-rgcer';
 commons.should_send_email = commons.quiz_mode == 'remote';
 
+commons.quiz_sections = [
+  { name: 'Physics' },
+  { name: 'Chemistry' },
+  { name: 'Mathematics' }
+];
+
 commons.get_registration_email_text = function( name, user_id, password ) {
     return "Hi " + name +",\n\
 \n\

@@ -15,28 +15,29 @@ exports.show_page = function( req, res ){
     Response.find( { user_id: req.session.u[ 0 ] }, null, { sort: { created: 1 } }, function( error, responses ){
         if( !error ) {
             var questions_status = get_empty_question_status();
+           
             if( responses ) {
                 responses.forEach( function( e, i, a ) {
-                    var mr = questions_status[ e.question_no ].multiple_responses;
+                    var status = 1;
+                    if( e.response_type === 'answer' && !!e.response ) {
+                        status = 0;
+                        if( e.mfr_value === true ) {
+                            status = 2;
+                        }
+                    }
+                    else if( e.mfr_value === true ) {
+                        status = 3;
+                    }
+
                     questions_status[ e.question_no ] = {
-                        completed_at:  e.correct || ( !e.correct && !mr ) ? moment( e.created ).calendar( ) : 'Incomplete',
-                        complete: e.correct,
-                        attempted: true,
-                        multiple_responses: mr,
+                        status: status,                       
                         section: questions_status[ e.question_no ].section
                     }
                 } );
             }
             res.render( 'questions', {
                 title: commons.quiz_name + ' | Play!',
-                sections: [
-                  { name: 'Physics' },
-                  { name: 'Chemistry' },
-                  { name: 'Mathematics' }
-                ],
-                last_submission: req.session.ls ? moment( req.session.ls ).calendar() : 'Never',
-                //score: req.session.u[2] + ' points',
-                score: 'N/A',
+                sections: commons.quiz_sections,
                 questions: questions_status,
                 can_solve: commons.is_under_time_limit( req.session.sa )
             } );
@@ -98,7 +99,6 @@ exports.show_question = function( req, res ) {
                 if( question.type == '2' ) {
                     question.choice = shuffle( question.choice );
                 }
-
                 return res.render( 'question_page',{
                     path: '/questions',
                     title: commons.quiz_name + ' | Question ' + question_id,
@@ -106,6 +106,7 @@ exports.show_question = function( req, res ) {
                     qid_max: qid_max,
                     qid_min: qid_min,
                     question: question,
+                    section: commons.quiz_sections[ question.section ].name,
                     answer_allowed: answer_allowed,
                     has_answered: has_answered,
                     selected_option: selected_option,
@@ -376,11 +377,8 @@ function get_empty_question_status( ) {
     var question_status = new Array();
     questions.forEach( function( e ){
         question_status.push( {
-            completed_at: 'Incomplete',
-            correct: false,
-            attempted: false,
+            status: 1,
             section: e.section,
-            multiple_responses: e.multiple_responses
         } );
     } );
     return question_status;
