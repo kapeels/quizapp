@@ -64,11 +64,19 @@
                     <li<%- path == menu[ i ].path ? ' class="active"' : ''  %>>
                         <%
                         if( menu[ i ].path === '/submit' ) {
+                          if( !can_stop ) {
+                            continue;
+                          }
                           %>
                           <a onclick="return confirm('WARNING: You cannot undo this action. \n\n Click OK to SUBMIT YOUR TEST or Cancel to go back.');" href="<%- menu[ i ].path %>"><span class="glyphicon glyphicon-<%- menu[ i ].glyph %>"></span> <%- menu[ i ].label %></a>
                           <%
-                        }
+                        }         
                         else {
+                          if( menu[ i ].path === '/start' ) {
+                            if( !can_start ) {
+                              continue;
+                            }
+                          }
                           %>
                           <a href="<%- menu[ i ].path %>"><span class="glyphicon glyphicon-<%- menu[ i ].glyph %>"></span> <%- menu[ i ].label %></a>
                           <%
@@ -84,6 +92,7 @@
             if( logged_in ) {
             %>
             <ul class="nav navbar-nav" style="float:right;">
+                <li><a><strong>Name: <%= user_name %></strong></a></li>
                 <li><a>Time Remaining: <strong class="text-warning" id="time_left"></strong></a></li>
             </ul>
             <%

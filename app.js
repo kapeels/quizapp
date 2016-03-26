@@ -69,7 +69,29 @@ app.use( function( req, res, next ) {
     res.locals.mega_event = commons.mega_event;
     res.locals.quiz_type = commons.quiz_type;
     res.locals.ends_in = (typeof req.session.sa == 'undefined' || !req.session.sa ) ? 0 : commons.get_quiz_end_time_relative( req.session.sa );
+    res.locals.user_name = req.logged_in ? req.session.u[ 1 ] : '';
     res.locals.start_link = !req.session.sa ? '/start' : '/questions';
+
+    res.locals.can_start = true;
+    // exam time hasn't started yet!
+    if( new Date().getTime() < commons.quiz_starts_at ) {
+        res.locals.can_start = false;
+    }
+    // user has already started the exam
+    if( req.session.sa !== null ) {
+        res.locals.can_start = false;
+    }
+
+    res.locals.can_stop = true;
+    // user has manually stopped the exam
+    if( req.session.is_completed ) {
+        res.locals.can_stop = false;
+    }
+    // exam is out of time limit... cannot stop now
+    if( !commons.is_under_time_limit( req.session.sa ) ) {
+        res.locals.can_stop = false;
+    }
+
 
     // session persisted messages
     if( typeof req.session.alert !== 'undefined' ) {

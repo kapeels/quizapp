@@ -24,6 +24,9 @@ commons.menu = [
     { label: 'Forgot Password', glyph: 'info-sign', path: '/forgot_password',
         show: { logged_in: false, logged_out: true, remote: true, local: false } },
 
+    { label: 'Questions', glyph: 'list-alt', path: '/questions',
+        show: { logged_in: true, logged_out: false, remote: true, local: true } },
+
     { label: 'Start Exam', glyph: 'play', path: '/start',
         show: { logged_in: true, logged_out: false, remote: true, local: true } },
 
@@ -46,12 +49,12 @@ commons.quiz_starts_at = new Date( 2015, 2 , 12, 11, 0 ).getTime();
 //commons.quiz_starts_at = new Date( 2015, 1 , 26, 10, 30 ).getTime();
 
 commons.admin_user = 'QZ9001';
-commons.quiz_name = 'RGCER Test';
+commons.quiz_name = 'MH-CET Mock Exam';
 commons.quiz_prefix = 'QZ';
 commons.user_id_offset = 5000;
 commons.mega_event = 'RGCER';
 
-commons.cookie_secret = '1293i1290349jdfm9dsmf9sdmf92md9';
+commons.cookie_secret = '1293i1290349j65ds1g65df1g65fddfm9dsmf9sdmf92md9';
 
 commons.smtp_host = '';
 commons.smtp_username = '';

@@ -32,11 +32,17 @@ exports.show_page = function( req, res ){
                     questions_status[ e.displayed_question_no ][ 'status' ] = status;
                 } );
             }
+            var can_solve = true;
+            if( !!req.session.sa ) {
+                if( !commons.is_under_time_limit( req.session.sa ) ) {
+                    can_solve = false;
+                }
+            }
             res.render( 'questions', {
                 title: commons.quiz_name + ' | Play!',
                 sections: commons.quiz_sections,
                 questions: questions_status,
-                can_solve: commons.is_under_time_limit( req.session.sa )
+                can_solve: can_solve
             } );
         }
         else {
@@ -241,7 +247,7 @@ exports.validate_answer = function( req, res ) {
 exports.start_page = function( req, res ) {
 
     if( req.session.sa != null ) {
-        return commons.flash_and_redirect( 'warning', 'Your quiz has already started!', '/questions', res, req );
+        return commons.flash_and_redirect( 'warning', 'Your exam has already started!', '/questions', res, req );
     }
     else {
         res.render( 'start', {
@@ -256,7 +262,7 @@ exports.start_page = function( req, res ) {
 exports.start_quiz = function( req, res ) {
 
     if( new Date().getTime() < commons.quiz_starts_at ) {
-        return commons.flash_and_redirect( 'info', "Quiz hasn't started yet.", '/start', res, req );
+        return commons.flash_and_redirect( 'info', "Exam hasn't started yet.", '/start', res, req );
     }
 
     var user_id = req.session.u[ 0 ];
@@ -317,7 +323,7 @@ exports.exam_must_be_started = function( req, res, next ) {
 
     if( req.session.sa == null ) {
         // user hasn't started the quiz yet
-        return commons.flash_and_redirect( 'danger', 'You should start the quiz before viewing the questions!', '/start' ,res, req );
+        return commons.flash_and_redirect( 'danger', 'You should start the exam before viewing the questions!', '/start' ,res, req );
     }
 
     next();
