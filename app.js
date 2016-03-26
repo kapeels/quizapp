@@ -24,6 +24,7 @@ var user = require( './routes/user' );
 var scoreboard = require( './routes/scoreboard' );
 var help = require( './routes/help' );
 var questions = require( './routes/questions' );
+var result = require( './routes/result' );
 
 var app = express();
 
@@ -41,7 +42,7 @@ app.use(express.urlencoded());
 app.use(express.methodOverride());
 app.use(express.cookieParser(commons.cookie_secret));
 app.use(express.session({
-    cookie: { maxAge: 3600000 }, // 1 hour..
+    cookie: { maxAge: 14400000 }, // 4 hours..
     //.. so that mongodb clears the session details one hour later if user doesn't log out
     secret: commons.cookie_secret,
     store: new MongoStore({
@@ -149,7 +150,7 @@ app.get( '/scoreboard', user.must_be_logged_in, user.must_be_admin, scoreboard.s
 app.get( '/start', user.must_be_logged_in, questions.start_page );
 app.post( '/start', user.must_be_logged_in, questions.start_quiz );
 app.get( '/submit', user.must_be_logged_in, questions.exam_must_be_started, questions.exam_must_not_be_over, questions.stop_quiz );
-//app.get( '/result', user.must_be_logged_in, questions.exam_must_be_over, result.show_page );
+app.get( '/result', user.must_be_logged_in, questions.exam_must_be_over, result.show_page );
 
 app.get( '/questions/:id', user.must_be_logged_in, questions.exam_must_be_started, questions.show_question );
 app.post( '/answers/:id', user.must_be_logged_in, questions.exam_must_be_started, questions.exam_must_not_be_over, questions.validate_answer );

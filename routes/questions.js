@@ -2,6 +2,7 @@
 var questions = require( '../models/questions.js' ),
     mongoose = require( 'mongoose'),
     Response = mongoose.model('Response'),
+    Result = mongoose.model( 'Result' ),
     User = mongoose.model( 'User' ),
     validator = require( 'validator'),
     moment = require( 'moment' );
@@ -288,7 +289,6 @@ exports.stop_quiz = function( req, res ) {
 
         User.findOneAndUpdate( { user_id: user_id }, { quiz_completed_at: Date.now(), quiz_completed: true } ).exec();
         req.session.is_completed = true;
-
         // stopped the quiz.. redirect user to dashboard
         return commons.flash_and_redirect( 'info', 'Your exam has been submitted!', '/questions', res, req );
     }

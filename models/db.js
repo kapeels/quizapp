@@ -29,3 +29,4 @@ process.on( 'SIGINT', function() {
 
 require( './user' );
 require( './response' );
+require( './result' );

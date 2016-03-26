@@ -1,0 +1,109 @@
+<% include common/header %>
+<div class="row-fluid">
+    <div class="col-md-12">
+        <h3>Result for <%= user_name %></h3>
+        <br />
+        <h3>Score: <strong><%= result.score %></strong></h3>
+        <div class="row-fluid">
+            <div class="col-md-4">
+                <h4>Section-wise scores</h4>
+                <table class="scores table table-bordered">
+                    <%
+                    for( var i = 0; i < sections.length; i++ ) {
+                        %>
+                        <tr>
+                            <td><%= sections[ i ].name %></td>
+                            <td><strong><%= result.section_wise_score[ i ] %></strong></td>
+                        </tr>
+                        <%
+                    }
+                    %>
+                    <tr>
+                        <td><strong>Total</strong></td>
+                        <td><strong><%= result.score %></strong></td>
+                    </tr>          
+                </table>
+                <canvas id="score_chart" width="250" style="margin: 0 auto;"></canvas>
+                <h5 class="text-center">Pie chart for score</h5>
+            </div>
+            <div class="col-md-8">
+                <h4>Analysis</h4>
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <%
+                            for( var i = 0; i < sections.length; i++ ) {
+                                %>
+                                <th><%= sections[ i ].name %></th>                                    
+                                <%
+                            }
+                            %>                           
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <%
+                            for( var i = 0; i < sections.length; i++ ) {
+                                %>
+                                <td>
+                                    <table class="analysis table table-bordered">
+                                        <tr class="active">
+                                            <td>Attempted</td>
+                                            <td><%= result.section_wise_analysis[ i ].answered %></td>
+                                        </tr>
+                                        <tr class="success">
+                                            <td>Correct</td>
+                                            <td><%= result.section_wise_analysis[ i ].correct %></td>
+                                        </tr>
+                                        <tr class="danger">
+                                            <td>Incorrect</td>
+                                            <td><%= result.section_wise_analysis[ i ].incorrect %></td>
+                                        </tr>
+                                    </table>
+                                </td>                                    
+                                <%
+                            }
+                            %>                            
+                        </tr>                        
+                    </tbody>                    
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="col-md-6 col-md-offset-3">
+
+    </div>
+</div>
+<script src="components/Chart.js/Chart.js"></script>
+<script type="text/javascript">
+var data = [
+    {
+        value: 9,
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: "<%= sections[ 0 ].name %>"
+    },
+    {
+        value: 4,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "<%= sections[ 1 ].name %>"
+    },
+    {
+        value: 4,
+        color: "#FDB45C",
+        highlight: "#FFC870",
+        label: "<%= sections[ 2 ].name %>"
+    }
+];
+var ctx = document.getElementById("score_chart").getContext("2d");
+var myPieChart = new Chart( ctx ).Pie( data );
+</script>
+<style type="text/css">
+table.scores tr td:nth-child(1), table.analysis tr td:nth-child(1) {
+    text-align: right;
+}
+</style>
+<% include common/footer %>
