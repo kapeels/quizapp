@@ -43,7 +43,7 @@ commons.menu = [
         show: { logged_in: true, logged_out: true, remote: true, local: false } }
 ];
 
-commons.quiz_duration = 3; // in minutes
+commons.quiz_duration = 10; // in minutes
 // year, month = 0 for jan and 11 for dec, day, hours, minutes, seconds
 commons.quiz_starts_at = new Date( 2015, 2 , 12, 11, 0 ).getTime();
 //commons.quiz_starts_at = new Date( 2015, 1 , 26, 10, 30 ).getTime();
@@ -116,7 +116,7 @@ commons.get_quiz_end_time = function( started_at ){
 }
 
 commons.get_quiz_end_time_relative = function( started_at ){
-    return started_at != null ? ( new Date( started_at ).getTime() + ( commons.quiz_duration * 60000 ) - new Date().getTime() ) : 0;
+    return started_at !== null ? ( new Date( started_at ).getTime() + ( commons.quiz_duration * 60000 ) - new Date().getTime() ) : 0;
 }
 
 commons.is_under_time_limit = function( started_at ) {

@@ -21,9 +21,18 @@
     <script src="/components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script type="text/javascript">
         $( document ).ready( function() {
-            $('#time_left').countdown( new Date().getTime() + <%- ends_in %>, function(event) {
-                $(this).html(event.strftime('%H:%M:%S'));
-            } );
+            var ends_in = <%- ends_in %>;
+            if( ends_in === 0 ) {
+                $( "#time_left" ).html( 'N/A (Exam yet to start)' );
+            }
+            else if( ends_in < 0 ) {
+                $( "#time_left" ).html( 'N/A (Exam is over)' );
+            } 
+            else {
+                $('#time_left').countdown( new Date().getTime() + ends_in, function(event) {
+                    $(this).html(event.strftime('%H:%M:%S'));
+                } );
+            }
         });
     </script>
   </body>

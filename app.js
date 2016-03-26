@@ -68,9 +68,16 @@ app.use( function( req, res, next ) {
     res.locals.quiz_name = commons.quiz_name;
     res.locals.mega_event = commons.mega_event;
     res.locals.quiz_type = commons.quiz_type;
-    res.locals.ends_in = (typeof req.session.sa == 'undefined' || !req.session.sa ) ? 0 : commons.get_quiz_end_time_relative( req.session.sa );
+    res.locals.ends_in = 0;
     res.locals.user_name = req.logged_in ? req.session.u[ 1 ] : '';
     res.locals.start_link = !req.session.sa ? '/start' : '/questions';
+
+    if( req.session.is_completed ) {
+        res.locals.ends_in = -1;
+    }
+    else {
+        res.locals.ends_in = (typeof req.session.sa === 'undefined' || !req.session.sa ) ? 0 : commons.get_quiz_end_time_relative( req.session.sa )
+    }
 
     res.locals.can_start = true;
     // exam time hasn't started yet!
