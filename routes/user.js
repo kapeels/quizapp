@@ -130,7 +130,7 @@ function generate_question_sheet( section_lengths ) {
         sub_sheets.push( sub_sheet );
         total_length += section_lengths[ j ];
     }
-    
+
     var offset = 0;
     for( var j = 0; j < section_lengths.length; j++ ) {
         for( var i = 0; i < section_lengths[ j ]; i++ ) {
@@ -179,7 +179,7 @@ exports.register_user = function( name, college, phone, email, callback, email_e
                           { section: 1, score: 0 },
                           { section: 2, score: 0 }
                         ],
-                        question_sheet: generate_question_sheet( [ 50, 25, 25 ] ),
+                        question_sheet: generate_question_sheet( [ 50, 50, 50 ] ),
                         last_submission: null,
                         started_at: null,
                         quiz_completed: false,

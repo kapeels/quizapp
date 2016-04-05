@@ -1,4 +1,5 @@
 var mongoose = require( 'mongoose'),
+    Response = mongoose.model('Response'),
     Result = mongoose.model('Result');
 
 function generate_result( user_id, res, callback ) {
@@ -65,13 +66,13 @@ exports.show_page = function( req, res ){
     var user_id = req.session.u[ 0 ];
     Result.find( { user_id: user_id }, function( error, result ) {
         if( !error ) {
-            if( result.length === 0 ) {               
+            if( result.length === 0 ) {
                 generate_result( user_id, res, next_step );
             }
             else {
-                next_step( false, result[ 0 ], res );       
+                next_step( false, result[ 0 ], res );
             }
-            return;    
+            return;
         }
         console.log( 'unexpected error occurred' );
     } );
