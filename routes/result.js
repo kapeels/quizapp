@@ -1,5 +1,6 @@
 var mongoose = require( 'mongoose'),
-    Result = mongoose.model('Result');
+    Result = mongoose.model('Result'),
+    Response = mongoose.model('Response');
 
 function generate_result( user_id, res, callback ) {
     var score = 0, section_wise_score = [ 0, 0, 0 ];
@@ -65,13 +66,13 @@ exports.show_page = function( req, res ){
     var user_id = req.session.u[ 0 ];
     Result.find( { user_id: user_id }, function( error, result ) {
         if( !error ) {
-            if( result.length === 0 ) {               
+            if( result.length === 0 ) {
                 generate_result( user_id, res, next_step );
             }
             else {
-                next_step( false, result[ 0 ], res );       
+                next_step( false, result[ 0 ], res );
             }
-            return;    
+            return;
         }
         console.log( 'unexpected error occurred' );
     } );
