@@ -16,7 +16,7 @@ exports.show_page = function( req, res ){
     Response.find( { user_id: req.session.u[ 0 ] }, null, { sort: { created: 1 } }, function( error, responses ){
         if( !error ) {
             var questions_status = get_empty_question_status( req.session.question_sheet );
-           
+
             if( responses ) {
                 responses.forEach( function( e, i, a ) {
                     var status = 1;
@@ -87,15 +87,15 @@ exports.show_question = function( req, res ) {
                         response_type = e.response_type;
                         if( e.mfr_value ) {
                           mfr_value = true;
-                        }  
+                        }
                         if( e.response_type === 'answer' ) {
                             if( !!e.response ) {
                                 has_answered = true;
                             }
                             if( question.type == '2' ) { // is MCQ
                                 selected_option = parseInt( e.response );
-                            }                            
-                        }                        
+                            }
+                        }
                     } );
                 }
 
@@ -103,7 +103,7 @@ exports.show_question = function( req, res ) {
                 if( question.answer === selected_option ) {
                     answer = '<span class="text-success">Correct</span>';
                 }
-                
+
                 for( var l = 0; l < question.choice.length; l++ ) {
                     // set the correct answer in the choice
                     if( question.choice[ l ].value === question.answer ) {
@@ -188,7 +188,7 @@ exports.validate_answer = function( req, res ) {
     if( answer_submitted === 'true' && !answer ) {
         //console.log( "Empty answer yo" );
         return commons.flash_and_redirect( 'danger', 'Please type an answer before submitting.', '/questions/' + question_id, res, req );
-    }    
+    }
 
     var question = questions[ req.session.question_sheet[ question_id - 1 ] ];
     var actual_question_id = question.question_no - 1;
@@ -199,20 +199,20 @@ exports.validate_answer = function( req, res ) {
             if( responses.length > 0 ) {
                 // we have prior responses...
                 responses.forEach( function( e ){
-                    prior_response_id = e._id;                   
-                });                
+                    prior_response_id = e._id;
+                });
             }
 
             if( cleared_response === 'true' ) {
                 add_response( prior_response_id, user_id, actual_question_id, question_id - 1, question.section, null, null, null, req, true, false );
-                return res.redirect( get_next_question_path( question_id - 1 ) );        
+                return res.redirect( get_next_question_path( question_id - 1 ) );
             }
 
             var correct_answer = false, answer_points = 0;
 
             // MFR was turned on
             if( mfr_clicked === 'true' ) {
-                mfr_clicked = true;              
+                mfr_clicked = true;
                 mfr_value = mfr_value === 'true';
             }
             else {
@@ -224,7 +224,7 @@ exports.validate_answer = function( req, res ) {
             if( answer_submitted === 'true' ) {
                 answer_submitted = true;
                 if( question.answer == answer ) {
-                    correct_answer = true;               
+                    correct_answer = true;
                     answer_points = question.correct_points;
                 }
             }
@@ -233,11 +233,11 @@ exports.validate_answer = function( req, res ) {
                 answer = null;
                 correct_answer = null;
                 answer_points = null;
-            }           
-            
+            }
+
             // MFR was not turned on
             add_response( prior_response_id, user_id, actual_question_id, question_id - 1, question.section, answer, correct_answer, answer_points, req, answer_submitted, mfr_clicked, mfr_value );
-            return res.redirect( get_next_question_path( question_id ) );        
+            return res.redirect( get_next_question_path( question_id ) );
         }
         console.log( "unexpected error occurred" );
         return commons.flash_and_redirect( 'danger', 'Unexpected error occurred. Please try again.', '/questions/' + question_id, res, req );
@@ -315,7 +315,7 @@ exports.exam_must_be_over = function( req, res, next ) {
         next( );
         return;
     }
-    
+
     return commons.flash_and_redirect( 'danger', 'Your exam is not over yet.', '/questions', res, req );
 }
 
@@ -339,9 +339,9 @@ exports.exam_must_not_be_over = function( req, res, next ) {
             next( );
             return;
         }
-    }   
+    }
 
-    return commons.flash_and_redirect( 'danger', 'Your time is over.', '/questions', res, req );    
+    return commons.flash_and_redirect( 'danger', 'Your time is over.', '/questions', res, req );
 }
 
 function increment_score( user_id, score, question_section, req ) {
@@ -394,7 +394,7 @@ function add_response( prior_response_id, user_id, question_no, displayed_questi
             };
         }
         if( mfr_clicked ) {
-            response_object[ 'mfr_value' ] = mfr_value;            
+            response_object[ 'mfr_value' ] = mfr_value;
         }
         Response.update( { "_id": prior_response_id }, response_object ).exec( );
     }
@@ -437,14 +437,13 @@ function add_response( prior_response_id, user_id, question_no, displayed_questi
 
 function get_empty_question_status( question_sheet ) {
     var question_status = new Array();
-
     for( var i = 0; i < question_sheet.length; i++ ) {
         question_status.push( {
             status: 1,
             section: questions[ question_sheet[ i ] ].section,
-        } );        
+        } );
     }
-  
+
     return question_status;
 }
 

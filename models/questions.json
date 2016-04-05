@@ -1,0 +1,2301 @@
+[{
+	"question_no": 1,
+	"type": 2,
+	"statement": "A body of mass 500 gram is rotating in a vertical circle of radius 1 m. What is the difference in its kinetic energies at the top and the bottom of the circle? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 4,
+	"choice": [{
+		"text": "4.9 J",
+		"value": 1
+	}, {
+		"text": "19.8 J",
+		"value": 2
+	}, {
+		"text": "2.8 J",
+		"value": 3
+	}, {
+		"text": "9.8 J",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 2,
+	"type": 2,
+	"statement": "A car has a linear velocity v on a circular track of radius r. If its speed is increasing at a rate of a m/s2, then its resultant acceleration will be ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 1,
+	"choice": [{
+		"text": "<span><img src=\"/images/answers/image1.gif\"</span>",
+		"value": 1
+	}, {
+		"text": "<span><img src=\"/images/answers/image2.gif\"</span>",
+		"value": 2
+	}, {
+		"text": "<span><img src=\"/images/answers/image3.gif\"</span>",
+		"value": 3
+	}, {
+		"text": "<span><img src=\"/images/answers/image4.gif\"</span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 3,
+	"type": 2,
+	"statement": "A body is moving a long a circular path with variable speed. It has ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 4,
+	"choice": [{
+		"text": "A radial acceleration",
+		"value": 1
+	}, {
+		"text": "a tangential acceleration",
+		"value": 2
+	}, {
+		"text": "zero acceleratin",
+		"value": 3
+	}, {
+		"text": "both tangential and radial accelerations",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 4,
+	"type": 2,
+	"statement": "Absorptive power of perfectly black body is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 3,
+	"choice": [{
+		"text": "zero",
+		"value": 1
+	}, {
+		"text": "infinity",
+		"value": 2
+	}, {
+		"text": "one",
+		"value": 3
+	}, {
+		"text": "constant",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 5,
+	"type": 2,
+	"statement": "If the temperature of the sun is doubled. The rate of energy received n the  earth will be increased by a factor of ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 4,
+	"choice": [{
+		"text": "2",
+		"value": 1
+	}, {
+		"text": "4",
+		"value": 2
+	}, {
+		"text": "8",
+		"value": 3
+	}, {
+		"text": "16",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 6,
+	"type": 2,
+	"statement": "Average kinetic energy of molecules is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "Directly proportional to square root of temperature",
+		"value": 1
+	}, {
+		"text": "Directly proportional to absolute temperature",
+		"value": 2
+	}, {
+		"text": "Independent of absolute temperature",
+		"value": 3
+	}, {
+		"text": "Inversely proportional to absolute temperature",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 7,
+	"type": 2,
+	"statement": "In stationary wave the distance between two successive nodes or two successive antinodes is equal to ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "λ",
+		"value": 1
+	}, {
+		"text": "<span><img src=\"/images/answers/image5.gif\"</span>",
+		"value": 2
+	}, {
+		"text": "<span><img src=\"/images/answers/image6.gif\"</span>",
+		"value": 3
+	}, {
+		"text": "<span><img src=\"/images/answers/image7.gif\"</span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 8,
+	"type": 2,
+	"statement": "The frequency of the second overtone of a closed pipe is in unison with the third overtone of an open pipe other ratio of lengths of the pipe is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "10:08",
+		"value": 1
+	}, {
+		"text": "05:08",
+		"value": 2
+	}, {
+		"text": "07:04",
+		"value": 3
+	}, {
+		"text": "04:07",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 9,
+	"type": 2,
+	"statement": "A siren emitting a note of frequency n is fitted on a police van, traveling towards a stationary listener. What is the velocity of the van, if the frequency of he note heard by the listener is double the original frequency? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 3,
+	"choice": [{
+		"text": "VS = V",
+		"value": 1
+	}, {
+		"text": "VS = 2V",
+		"value": 2
+	}, {
+		"text": "<span><img src=\"/images/answers/image8.gif\"</span>",
+		"value": 3
+	}, {
+		"text": "<span><img src=\"/images/answers/image9.gif\"</span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 10,
+	"type": 2,
+	"statement": "To demonstrate the phenomenon of beats we need ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 1,
+	"choice": [{
+		"text": "Two sources which emit radiation of nearly the same frequency",
+		"value": 1
+	}, {
+		"text": "Two sources which emit radiation of exactly the same frequency",
+		"value": 2
+	}, {
+		"text": "Two sourceswhich emit radiation of exactly the same frequency and have a  definite phase relationship",
+		"value": 3
+	}, {
+		"text": "Two sources which emit radiation of exactly the same wavelength",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 11,
+	"type": 2,
+	"statement": "Strain energy per unit volume is given by ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 1,
+	"choice": [{
+		"text": "<span><img src=\"/images/answers/image10.gif\"</span>",
+		"value": 1
+	}, {
+		"text": "<span><img src=\"/images/answers/image11.gif\"</span>",
+		"value": 2
+	}, {
+		"text": "<span><img src=\"/images/answers/image12.gif\"</span>",
+		"value": 3
+	}, {
+		"text": "<span><img src=\"/images/answers/image13.gif\"</span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 12,
+	"type": 2,
+	"statement": "An iron bar of length 'l' m and cross section 'A' m<sup>2</sup> is pulled by a force of 'F' Newton from both ends so as to produce and elongation in meters. Which of the following statement statements is correct ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 3,
+	"choice": [{
+		"text": "Elongation is inversely proportional to length l",
+		"value": 1
+	}, {
+		"text": "Elongation is directly proportional to cross section A",
+		"value": 2
+	}, {
+		"text": "Elongation is inversely proportional to A",
+		"value": 3
+	}, {
+		"text": "Elongation is directly proportional to Young's modulus",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 13,
+	"type": 2,
+	"statement": "One end of a towel dips into a bucket full of water and other end hangs over the bucket. It is found that after some time the towel becomes fully wet. It happens ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "Because viscosity of eater is high",
+		"value": 1
+	}, {
+		"text": "Because of the capillary action of cotton threads",
+		"value": 2
+	}, {
+		"text": "Because of gravitational force",
+		"value": 3
+	}, {
+		"text": "Because of evaporation of water.",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 14,
+	"type": 2,
+	"statement": "What is the change in surface energy, when a mercury drop of radius R splits up into 1000 droplets of radius r? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 4,
+	"choice": [{
+		"text": "8 pR2T",
+		"value": 1
+	}, {
+		"text": "16 pR2T",
+		"value": 2
+	}, {
+		"text": "24 Pr2t",
+		"value": 3
+	}, {
+		"text": "36 pR2T",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 15,
+	"type": 2,
+	"statement": "Time period of simple pendulum of length l and a place where acceleration due to gravity is g is T. what is the period of a simple pendulum of the same length at a place where the acceleration due to gravity is 1.029 is, ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 3,
+	"choice": [{
+		"text": "T",
+		"value": 1
+	}, {
+		"text": "1.02 T",
+		"value": 2
+	}, {
+		"text": "0.99 T",
+		"value": 3
+	}, {
+		"text": "1.01 T",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 16,
+	"type": 2,
+	"statement": "The acceleration of particle executing S.H.M. when it is at mean position is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 4,
+	"choice": [{
+		"text": "Infinite",
+		"value": 1
+	}, {
+		"text": "Varie",
+		"value": 2
+	}, {
+		"text": "Maximum",
+		"value": 3
+	}, {
+		"text": "Zero",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 17,
+	"type": 2,
+	"statement": "Calculate the M.I. of a thin uniform ring about an axis tangent to the ring and in a plane of the ring, if its M.I. about an axis passing through the centre and perpendicular to plane is 4 kg m2. ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 3,
+	"choice": [{
+		"text": "12 kg m2",
+		"value": 1
+	}, {
+		"text": "3 kg m2",
+		"value": 2
+	}, {
+		"text": "6 kg m2",
+		"value": 3
+	}, {
+		"text": "9 kg m2",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 18,
+	"type": 2,
+	"statement": "Two circular discs A and B have equal masses and uniform thickness but have densities r1 and r2 such that r1 > r2. their moment of inertia is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 3,
+	"choice": [{
+		"text": "I1 > I2",
+		"value": 1
+	}, {
+		"text": "I1>>I2",
+		"value": 2
+	}, {
+		"text": "I1 < I2",
+		"value": 3
+	}, {
+		"text": "I1 = I2",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 19,
+	"type": 2,
+	"statement": "Radius of gyration of disc rotating about an axis perpendicular to its passing through its centre is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "<span><img src=\"/images/answers/image14.gif\"</span>",
+		"value": 1
+	}, {
+		"text": "<span><img src=\"/images/answers/image15.gif\"</span>",
+		"value": 2
+	}, {
+		"text": "<span><img src=\"/images/answers/image16.gif\"</span>",
+		"value": 3
+	}, {
+		"text": "<span><img src=\"/images/answers/image17.gif\"</span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 20,
+	"type": 2,
+	"statement": "The planet mercury is revolving in an elliptical orbit around the sun as shown in figure. The kinetic energy of mercury will be greater at\n=im <span><img src=\"/images/question/q20.png\" /></span>",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 1,
+	"choice": [{
+		"text": "A",
+		"value": 1
+	}, {
+		"text": "B",
+		"value": 2
+	}, {
+		"text": "C",
+		"value": 3
+	}, {
+		"text": "D",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 21,
+	"type": 2,
+	"statement": "The dimensions of universal gravitational constant are ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "[M2 L2 T-2]",
+		"value": 1
+	}, {
+		"text": "[M-1 L3 T-2]",
+		"value": 2
+	}, {
+		"text": "[M L-1 T-2]",
+		"value": 3
+	}, {
+		"text": "[M L2 T-2]",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 22,
+	"type": 2,
+	"statement": "If the sheet of a bakelite is inserted between the plates of an air capacitor, the capacitance will ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "decrease",
+		"value": 1
+	}, {
+		"text": "increase",
+		"value": 2
+	}, {
+		"text": "remains unchanged",
+		"value": 3
+	}, {
+		"text": "become zero",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 23,
+	"type": 2,
+	"statement": "A field line and an equipotential surface are ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "always parallel",
+		"value": 1
+	}, {
+		"text": "always at 90°",
+		"value": 2
+	}, {
+		"text": "inclined at any angle 0",
+		"value": 3
+	}, {
+		"text": "none of the above",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 24,
+	"type": 2,
+	"statement": "Which of the following is a ferromagnetic material ? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 4,
+	"choice": [{
+		"text": "Tungsten",
+		"value": 1
+	}, {
+		"text": "Aluminum",
+		"value": 2
+	}, {
+		"text": "Copper",
+		"value": 3
+	}, {
+		"text": "Nickel",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 25,
+	"type": 2,
+	"statement": "Magnetism of a magnet can be destroyed by ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 4,
+	"choice": [{
+		"text": "heating",
+		"value": 1
+	}, {
+		"text": "hammering",
+		"value": 2
+	}, {
+		"text": "by inductive action of another magnet",
+		"value": 3
+	}, {
+		"text": "by all above methods",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 26,
+	"type": 2,
+	"statement": "As per Faraday's laws of electromagnetic induction, an e.m.f. is induced in a conductor whenever it ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 3,
+	"choice": [{
+		"text": "lies perpendicular to the magnetic flux",
+		"value": 1
+	}, {
+		"text": "lies in a magnetic field",
+		"value": 2
+	}, {
+		"text": "cuts magnetic flux",
+		"value": 3
+	}, {
+		"text": "moves parallel to the direction of the magnetic field.",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 27,
+	"type": 2,
+	"statement": "An e.m.f. of 16 volts is induced in a coil of inductance 4H. The rate of change of current must be ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 4,
+	"choice": [{
+		"text": "64 A/s",
+		"value": 1
+	}, {
+		"text": "32 A/s",
+		"value": 2
+	}, {
+		"text": "32 A/s",
+		"value": 3
+	}, {
+		"text": "4 A/s",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 28,
+	"type": 2,
+	"statement": "Which of the following inductor will have the least eddy current losses ? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 1,
+	"choice": [{
+		"text": "Air core",
+		"value": 1
+	}, {
+		"text": "Laminated iron core",
+		"value": 2
+	}, {
+		"text": "Iron core",
+		"value": 3
+	}, {
+		"text": "Powdered iron core",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 29,
+	"type": 2,
+	"statement": "Communication is a process of ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 1,
+	"choice": [{
+		"text": "transfer of information",
+		"value": 1
+	}, {
+		"text": "transfer of energy",
+		"value": 2
+	}, {
+		"text": "transfer of channel",
+		"value": 3
+	}, {
+		"text": "none of these",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 30,
+	"type": 2,
+	"statement": "In amplitude modulation, amplitude is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 3,
+	"choice": [{
+		"text": "constant",
+		"value": 1
+	}, {
+		"text": "zero",
+		"value": 2
+	}, {
+		"text": "variable",
+		"value": 3
+	}, {
+		"text": "none of these",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 31,
+	"type": 2,
+	"statement": "The voltage drop across the resistor 9 ohm will be <span><img src=\"/images/question/q31.gif\" /></span>",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 1,
+	"choice": [{
+		"text": "18 V",
+		"value": 1
+	}, {
+		"text": "12 V",
+		"value": 2
+	}, {
+		"text": "9 V",
+		"value": 3
+	}, {
+		"text": "6 V",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 32,
+	"type": 2,
+	"statement": "Which of the following cannot be explained with a wave theory of light? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 3,
+	"choice": [{
+		"text": "Polarization",
+		"value": 1
+	}, {
+		"text": "Interference",
+		"value": 2
+	}, {
+		"text": "Photoelectric effect",
+		"value": 3
+	}, {
+		"text": "All of them",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 33,
+	"type": 2,
+	"statement": "According to Newton's carposculer theory the speed of light is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "same in all the media",
+		"value": 1
+	}, {
+		"text": "Lesser in reare medium",
+		"value": 2
+	}, {
+		"text": "Lesser in dencer  medium",
+		"value": 3
+	}, {
+		"text": "Independenet of the medium",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 34,
+	"type": 2,
+	"statement": "What principle is responsible for light spreading as it passes through a narrow slit? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 3,
+	"choice": [{
+		"text": "Refraction",
+		"value": 1
+	}, {
+		"text": "Polarization",
+		"value": 2
+	}, {
+		"text": "Diffraction",
+		"value": 3
+	}, {
+		"text": "Interference",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 35,
+	"type": 2,
+	"statement": "Two light sources are said to be coherent if they ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "are of the same frequency.",
+		"value": 1
+	}, {
+		"text": "are of the same frequency, and maintain a constant phase difference.",
+		"value": 2
+	}, {
+		"text": "are of the same amplitude, and maintain a constant phase difference.",
+		"value": 3
+	}, {
+		"text": "are of the same frequency and amplitude.",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 36,
+	"type": 2,
+	"statement": "A fringe width of a certain interference pattern is ? = 0.002 cm. what is the distance of fifth dark fringe from center? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 1,
+	"choice": [{
+		"text": "9 x 10<sup>-3</sup> cm",
+		"value": 1
+	}, {
+		"text": "11 x 10<sup>-2</sup> cm",
+		"value": 2
+	}, {
+		"text": "1.1 x 10<sup>-2</sup> cm",
+		"value": 3
+	}, {
+		"text": "3.28  x 10<sup>-6</sup> cm",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 37,
+	"type": 2,
+	"statement": "In a Fraunhofer diffraction experiment at a single slit using a light of wavelength 400 nm, the first minimum is formed at an angle of 300. The direction  of the first secondary maximum is given by ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "Sin<span class=\"exponent\"><sup>-1</sup><img src=\"/images/answers/image20.gif\" /></span>",
+		"value": 1
+	}, {
+		"text": "Sin<span class=\"exponent\"><sup>-1</sup><img src=\"/images/answers/image21.gif\" /></span>",
+		"value": 2
+	}, {
+		"text": "Sin<span class=\"exponent\"><sup>-1</sup><img src=\"/images/answers/image22.gif\" /></span>",
+		"value": 3
+	}, {
+		"text": "Tan<span class=\"exponent\"><sup>-1</sup><img src=\"/images/answers/image20.gif\" /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 38,
+	"type": 2,
+	"statement": "In common base circuit of a transistor, current amplification factor is 0.95. Calculate the emitter current if base current is 0.2 mA ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "2 mA",
+		"value": 1
+	}, {
+		"text": "4 mA",
+		"value": 2
+	}, {
+		"text": "6 mA",
+		"value": 3
+	}, {
+		"text": "8 mA",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 39,
+	"type": 2,
+	"statement": "Light of wavelength λA and λB falls on two identical metal plates A and B respectively.The maximum kinetic energy of photoelectrons in KA and KB respectively, then which one  of the following relations is true ? (λA = 2 λB) ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 1,
+	"choice": [{
+		"text": "KA<  KB/2",
+		"value": 1
+	}, {
+		"text": "2KA = KB",
+		"value": 2
+	}, {
+		"text": "KA = 2 KB",
+		"value": 3
+	}, {
+		"text": "KA > 2 KB",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 40,
+	"type": 2,
+	"statement": "An electron in potentiometer wire experiences a force 2.4 x 10<sup>-19</sup> N. The length of potentiometer wire is 6m. The e.m.f. of the battery connected across the wire is (electronic charge = 1.6 x 10<sup>-19</sup> C) ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "6 V",
+		"value": 1
+	}, {
+		"text": "9 V",
+		"value": 2
+	}, {
+		"text": "12 V",
+		"value": 3
+	}, {
+		"text": "15 V",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 41,
+	"type": 2,
+	"statement": "In insulators (C.B. is conduction band and V.B. is valence band) ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 3,
+	"choice": [{
+		"text": "V.B. is partially filled with electrons",
+		"value": 1
+	}, {
+		"text": "C.B. is partially filled with electrons",
+		"value": 2
+	}, {
+		"text": "C.B. is empty and V.B. is filled with electrons",
+		"value": 3
+	}, {
+		"text": "C.B. is filled with electrons and V.B. is empty",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 42,
+	"type": 2,
+	"statement": "According to bohr's atomic model the angular momentum of electron in n<sup>th</sup> orbit is equal to an integral multiple of ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "2h/π",
+		"value": 1
+	}, {
+		"text": "h/2π",
+		"value": 2
+	}, {
+		"text": "h/π",
+		"value": 3
+	}, {
+		"text": "nh/2π",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 43,
+	"type": 2,
+	"statement": "What is the mass of the products of a nuclear fusion reaction compared to the original elements? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "greater",
+		"value": 1
+	}, {
+		"text": "less",
+		"value": 2
+	}, {
+		"text": "the same",
+		"value": 3
+	}, {
+		"text": "varies according to the reaction",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 44,
+	"type": 2,
+	"statement": "Uncertainty principle is applicable to ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "Macroscopic particles",
+		"value": 1
+	}, {
+		"text": "Microscopic particles",
+		"value": 2
+	}, {
+		"text": "gases",
+		"value": 3
+	}, {
+		"text": "none",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 45,
+	"type": 2,
+	"statement": "n1 is the frequency of the series limit of Lyman series, n2 is the frequency of the first line of Lyman series and n3 is the frequency of the series limit of the Balmer series. Then ______. ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 3,
+	"choice": [{
+		"text": "<span><img src=\"/images/answers/image23.gif\"</span>",
+		"value": 1
+	}, {
+		"text": "<span><img src=\"/images/answers/image24.gif\"</span>",
+		"value": 2
+	}, {
+		"text": "v1 - v2 = v3",
+		"value": 3
+	}, {
+		"text": "v1 = v2 -v3",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 46,
+	"type": 2,
+	"statement": "92U235 undergoes successive disintegrations with the end product of 82Pb203. The Number of a and b particles emitted are ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 3,
+	"choice": [{
+		"text": "a = 6, b = 4",
+		"value": 1
+	}, {
+		"text": "a = 6, b = 0",
+		"value": 2
+	}, {
+		"text": "a = 8, b = 6",
+		"value": 3
+	}, {
+		"text": "a = 3, b = 3",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 47,
+	"type": 2,
+	"statement": "A certain current on passing through a galvanometer produces a deflection of 100 divisions. When a shunt of one ohm is connected, the deflection reduces to 1 division. The galvanometer resistance is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 2,
+	"choice": [{
+		"text": "100 W",
+		"value": 1
+	}, {
+		"text": "99 W",
+		"value": 2
+	}, {
+		"text": "10 W",
+		"value": 3
+	}, {
+		"text": "9.9 W",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 48,
+	"type": 2,
+	"statement": "A mass of 10 kg is suspended from a spring balance. It is pulled aside by a horizontal string so that it makes an angle of` 600 with the vertical. The new reading of the balance is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 1,
+	"choice": [{
+		"text": "20 kg.wt",
+		"value": 1
+	}, {
+		"text": "10 kg.wt",
+		"value": 2
+	}, {
+		"text": "<span><img src=\"/images/answers/image25.gif\" /></span>    kg.wt",
+		"value": 3
+	}, {
+		"text": "<span><img src=\"/images/answers/image26.gif\" /></span>    kg.wt",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 49,
+	"type": 2,
+	"statement": "Hydrogen atom does not emit X-rays because ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 4,
+	"choice": [{
+		"text": "it contains only a single electron",
+		"value": 1
+	}, {
+		"text": "energy levels in it are far apart",
+		"value": 2
+	}, {
+		"text": "its size is very small",
+		"value": 3
+	}, {
+		"text": "energy levels in it are very close to each other",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 50,
+	"type": 2,
+	"statement": "If g is the ratio of specific heats and R is the universal gas constant, then the molar specific heat at constant volume Cv is given by ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 0,
+	"answer": 3,
+	"choice": [{
+		"text": "y R",
+		"value": 1
+	}, {
+		"text": "<span><img src=\"/images/answers/image27.gif\"</span>",
+		"value": 2
+	}, {
+		"text": "<span><img src=\"/images/answers/image27.gif\"</span>",
+		"value": 3
+	}, {
+		"text": "<span><img src=\"/images/answers/image27.gif\"</span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 51,
+	"type": 2,
+	"statement": "Which of the following is a molecular crystal? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 1,
+	"choice": [{
+		"text": "Dry ice",
+		"value": 1
+	}, {
+		"text": "Quartz",
+		"value": 2
+	}, {
+		"text": "Rock salt",
+		"value": 3
+	}, {
+		"text": "Diamond",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 52,
+	"type": 2,
+	"statement": "The edge length of a face centered cubic cell of an ionic substance is 508 pm. If the radius of the cation is 110 pm, the radius of the anion is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "288 pm",
+		"value": 1
+	}, {
+		"text": "144 pm",
+		"value": 2
+	}, {
+		"text": "618 pm",
+		"value": 3
+	}, {
+		"text": "398 pm",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 53,
+	"type": 2,
+	"statement": "6.02 x 1020 molecules of urea are present in 100 mL of its solution. The concentration of solution is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "0.02 M",
+		"value": 1
+	}, {
+		"text": "0.01 M",
+		"value": 2
+	}, {
+		"text": "0.001 M",
+		"value": 3
+	}, {
+		"text": "0.1 M",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 54,
+	"type": 2,
+	"statement": "How many grams of concentrated nitric acid solution should be used to prepare 250 mL of 2.0 M HNO3? The concentrated acid is 70% HNO3. ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 1,
+	"choice": [{
+		"text": "45.0 g conc HNO3",
+		"value": 1
+	}, {
+		"text": "90.0 g conc HNO3",
+		"value": 2
+	}, {
+		"text": "70.0 g concHNO3",
+		"value": 3
+	}, {
+		"text": "54.0 g conc HNO3",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 55,
+	"type": 2,
+	"statement": "A 5.25% solution of a substance is isotonic with a 1.5% solution of urea (molar mass = 60 g mol–1) in the same solvent. If the densities of both the solutions are assumed to be equal to 1.0 g cm–3, molar mass of the substance will be",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 4,
+	"choice": [{
+		"text": "90.0 g mol-1",
+		"value": 1
+	}, {
+		"text": "115.0 g mol-1",
+		"value": 2
+	}, {
+		"text": "105.0 g mol-1",
+		"value": 3
+	}, {
+		"text": "210.0 g mol-1",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 56,
+	"type": 2,
+	"statement": "At 80°C the vapour pressure of pure liquid ‘A’ is 520 mm Hg and that of pure liquid ‘B’ is 1000 mm Hg. If a mixture of solution of 'A’ and ‘B’ boils at 80°C and 1 atm pressure, the amount of ‘A’ in the mixture is (1 atm = 760 mm Hg)",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 1,
+	"choice": [{
+		"text": "50 mol percent",
+		"value": 1
+	}, {
+		"text": "52 mol percent",
+		"value": 2
+	}, {
+		"text": "34 mol percent",
+		"value": 3
+	}, {
+		"text": "48 mol percent",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 57,
+	"type": 2,
+	"statement": "The one which decreases with dilution is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "conductance",
+		"value": 1
+	}, {
+		"text": "specific conductance",
+		"value": 2
+	}, {
+		"text": "equivalent conductance",
+		"value": 3
+	}, {
+		"text": "molar conductance",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 58,
+	"type": 2,
+	"statement": "The standard electrode potential for the half cell reactions are   Zn++ + 2e– → Zn, Eo = – 0.76 V <br />        Fe++ + 2e– → Fe, Eo = – 0.44 V <br /> The e.m.f. of the cell reaction Fe++ + Zn → Zn++ + Fe is",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 4,
+	"choice": [{
+		"text": "-1.20 V",
+		"value": 1
+	}, {
+		"text": "+1.20 V",
+		"value": 2
+	}, {
+		"text": "+0.32 V",
+		"value": 3
+	}, {
+		"text": "-0.32 V",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 59,
+	"type": 2,
+	"statement": "Among the following cells Leclanche cell (I), Nickel-cadmium cell (II), Lead storage battery (III), Mercury cell (IV)    Primary cells are ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 4,
+	"choice": [{
+		"text": "I and II",
+		"value": 1
+	}, {
+		"text": "II and III",
+		"value": 2
+	}, {
+		"text": "I and III",
+		"value": 3
+	}, {
+		"text": "I and IV",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 60,
+	"type": 2,
+	"statement": "Aqueous copper sulphate solution is electrolyzed using platinum electrodes. The electrode reaction occurring at cathode is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 1,
+	"choice": [{
+		"text": "Cu2+ (aq) + 2e– → Cu(s)",
+		"value": 1
+	}, {
+		"text": "Cu(s) → Cu2+ (aq) + 2e–",
+		"value": 2
+	}, {
+		"text": "2H2O(l) → O2(g) + 4H+ (aq) + 4e–",
+		"value": 3
+	}, {
+		"text": "O2(g) + 4H+ (aq) + 4e– → 2H2O(l)",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 61,
+	"type": 2,
+	"statement": "In a first order reaction A ? B, if k is rate constant and initial concentration of the reactant A is 0.5 M, then the half-life is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 3,
+	"choice": [{
+		"text": "<span><img src=\"/images/answers/image30.gif\"</span>",
+		"value": 1
+	}, {
+		"text": "<span><img src=\"/images/answers/image31.gif\"</span>",
+		"value": 2
+	}, {
+		"text": "<span><img src=\"/images/answers/image32.gif\"</span>",
+		"value": 3
+	}, {
+		"text": "<span><img src=\"/images/answers/image33.gif\"</span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 62,
+	"type": 2,
+	"statement": "Consider the reaction,  2A + B → Products<br />When concentration of B alone was doubled, the half-life did not change. When the concentration of A alone was doubled, the rate increased by two times. The unit of rate constant for this reaction is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 3,
+	"choice": [{
+		"text": "no unit",
+		"value": 1
+	}, {
+		"text": "mol L–1 s–1",
+		"value": 2
+	}, {
+		"text": "L mol–1 s–1",
+		"value": 3
+	}, {
+		"text": "s–1",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 63,
+	"type": 2,
+	"statement": "<span><img src=\"/images/question/q63.png\" /></span>",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 1,
+	"choice": [{
+		"text": "<span><img src=\"/images/answers/image35.gif\"</span>",
+		"value": 1
+	}, {
+		"text": "<span><img src=\"/images/answers/image36.gif\"</span>",
+		"value": 2
+	}, {
+		"text": "<span><img src=\"/images/answers/image37.gif\"</span>",
+		"value": 3
+	}, {
+		"text": "<span><img src=\"/images/answers/image38.gif\"</span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 64,
+	"type": 2,
+	"statement": "In Freundlich Adsorption isotherm, the value of 1/n is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 3,
+	"choice": [{
+		"text": "1 in case of physical adsorption",
+		"value": 1
+	}, {
+		"text": "1 in case of chemisorptions",
+		"value": 2
+	}, {
+		"text": "Between 0 and 1 in all cases",
+		"value": 3
+	}, {
+		"text": "between 2 and 4 in all cases",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 65,
+	"type": 2,
+	"statement": "Which one of the following statement is incorrect about enzyme catalysis? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "Enzymes are denaturated by ultraviolet rays and at high temperature",
+		"value": 1
+	}, {
+		"text": "Enzymes are least reactive at optimum temperature",
+		"value": 2
+	}, {
+		"text": "Enzymes are mostly proteinous in nature",
+		"value": 3
+	}, {
+		"text": "Enzyme action is specific",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 66,
+	"type": 2,
+	"statement": "The protecting power of lyophilic colloidal sol is expressed in terms of ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 4,
+	"choice": [{
+		"text": "Critical miscelle concentration",
+		"value": 1
+	}, {
+		"text": "Oxidation number",
+		"value": 2
+	}, {
+		"text": "Coagulation value",
+		"value": 3
+	}, {
+		"text": "Gold number",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 67,
+	"type": 2,
+	"statement": "Which one of the following is an example for homogenous catalysis? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 4,
+	"choice": [{
+		"text": "Hydrogenation of oil",
+		"value": 1
+	}, {
+		"text": "Manufacture of ammonia by Haber's process",
+		"value": 2
+	}, {
+		"text": "Manufacture of sulphuric acid by Contact process",
+		"value": 3
+	}, {
+		"text": "Hydrolysis of sucrose in presence of dilute hydrochloric acid",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 68,
+	"type": 2,
+	"statement": "Which of the following molecules has trigonal planner geometry ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "NH3",
+		"value": 1
+	}, {
+		"text": "BF3",
+		"value": 2
+	}, {
+		"text": "PCl3",
+		"value": 3
+	}, {
+		"text": "IF3",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 69,
+	"type": 2,
+	"statement": "Which is the most easily liquefiable rare gas? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 1,
+	"choice": [{
+		"text": "Xe",
+		"value": 1
+	}, {
+		"text": "Kr",
+		"value": 2
+	}, {
+		"text": "Ar",
+		"value": 3
+	}, {
+		"text": "Ne",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 70,
+	"type": 2,
+	"statement": "NO2 is not obtained on heating ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "AgNO3",
+		"value": 1
+	}, {
+		"text": "KNO3",
+		"value": 2
+	}, {
+		"text": "Cu(NO3)2",
+		"value": 3
+	}, {
+		"text": "Pb(NO3)2",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 71,
+	"type": 2,
+	"statement": "Which one of the following exists in the oxidation state other than +3? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 3,
+	"choice": [{
+		"text": "B",
+		"value": 1
+	}, {
+		"text": "Al",
+		"value": 2
+	}, {
+		"text": "Ce",
+		"value": 3
+	}, {
+		"text": "Ga",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 72,
+	"type": 2,
+	"statement": "Which one of the following ions exhibits colour in aqueous solution ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "Sc3+",
+		"value": 1
+	}, {
+		"text": "Ni2+",
+		"value": 2
+	}, {
+		"text": "Ti4+",
+		"value": 3
+	}, {
+		"text": "Zn2+",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 73,
+	"type": 2,
+	"statement": "Which ore contains both iron and copper? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 3,
+	"choice": [{
+		"text": "Cuprite",
+		"value": 1
+	}, {
+		"text": "Chalcocite",
+		"value": 2
+	}, {
+		"text": "Chalcopyrite",
+		"value": 3
+	}, {
+		"text": "Malachite",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 74,
+	"type": 2,
+	"statement": "The value of the 'spin only' magnetic moment for one of the following configurations is 2.84 BM. The correct one is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 1,
+	"choice": [{
+		"text": "d4 (in strong ligand filed)",
+		"value": 1
+	}, {
+		"text": "d4 (in weak ligand field)",
+		"value": 2
+	}, {
+		"text": "d3 (in weak as well as in strong fields)",
+		"value": 3
+	}, {
+		"text": "d5 (in strong ligand field)",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 75,
+	"type": 2,
+	"statement": "Which complex can not ionize in solution? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 4,
+	"choice": [{
+		"text": "[Pt(NH3)6] Cl4",
+		"value": 1
+	}, {
+		"text": "K2[pt(F6)]",
+		"value": 2
+	}, {
+		"text": "K4[Fe(CN)6]",
+		"value": 3
+	}, {
+		"text": "[CoCl3(NH3)3]",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 76,
+	"type": 2,
+	"statement": "Which has maximum paramagnetic character? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 4,
+	"choice": [{
+		"text": "[Fe(CN)6]4-",
+		"value": 1
+	}, {
+		"text": "[Cu(H2O)4]2+",
+		"value": 2
+	}, {
+		"text": "[Cu(NH3)4]2+",
+		"value": 3
+	}, {
+		"text": "[Mn (H2O)6]2+",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 77,
+	"type": 2,
+	"statement": "Acetone is treated with excess of ethanol in the presence of hydrochloric aci(D) The product obtained is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "<span><img src=\"/images/answers/image39.gif\"</span>",
+		"value": 1
+	}, {
+		"text": "<span><img src=\"/images/answers/image40.gif\"</span>",
+		"value": 2
+	}, {
+		"text": "<span><img src=\"/images/answers/image41.gif\"</span>",
+		"value": 3
+	}, {
+		"text": "<span><img src=\"/images/answers/image42.gif\"</span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 78,
+	"type": 2,
+	"statement": "Clemmensen reduction of a ketone is carried out in the presence of which of the following? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 3,
+	"choice": [{
+		"text": "H2 and Pt as catalyst",
+		"value": 1
+	}, {
+		"text": "Glycol with KOH",
+		"value": 2
+	}, {
+		"text": "Zn-Hg with HCl",
+		"value": 3
+	}, {
+		"text": "LiAlH4",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 79,
+	"type": 2,
+	"statement": "<span><img src=\"/images/question/q79.png\" /></span>",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "PhCH2CH2CHO",
+		"value": 1
+	}, {
+		"text": "PhCOCH2CH3",
+		"value": 2
+	}, {
+		"text": "PhCH2COCH3",
+		"value": 3
+	}, {
+		"text": "PhCOCOMe",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 80,
+	"type": 2,
+	"statement": "Which of the following statements is not correct? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "Aldehydes and ketones undergo nucleophilic addition",
+		"value": 1
+	}, {
+		"text": "Aldehydes and ketones undergo electrophilic substitution",
+		"value": 2
+	}, {
+		"text": "Aldehydes and ketones contain polar carbonyl group",
+		"value": 3
+	}, {
+		"text": "Lower members of aldehydes and ketones are soluble in water due the hydrogen bonding",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 81,
+	"type": 2,
+	"statement": "When phenol is treated with CHCl3 and NaOH, the product formed is: ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "Salicylic acid",
+		"value": 1
+	}, {
+		"text": "Salicylaldehyde",
+		"value": 2
+	}, {
+		"text": "Benzaldehyde",
+		"value": 3
+	}, {
+		"text": "Benzoic acid",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 82,
+	"type": 2,
+	"statement": "When Phenyl Magnesium Bromide reacts with tert. butanol, which of the following is formed ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "Tert. butyl methyl ether",
+		"value": 1
+	}, {
+		"text": "Benzene",
+		"value": 2
+	}, {
+		"text": "Tert. butyl benzene",
+		"value": 3
+	}, {
+		"text": "Phenol",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 83,
+	"type": 2,
+	"statement": "Which of the following compounds when heated with CO at 150?C and 500 atm pressure in presence of BF3 forms ethyl propionate? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 3,
+	"choice": [{
+		"text": "C2H5OH",
+		"value": 1
+	}, {
+		"text": "CH3OCH3",
+		"value": 2
+	}, {
+		"text": "C2H5OC2H5",
+		"value": 3
+	}, {
+		"text": "CH3OC2H5",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 84,
+	"type": 2,
+	"statement": "Which of the following conditions are used for the conversion of ethanol to ethylene ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 4,
+	"choice": [{
+		"text": "dil H2SO4 / 100°C",
+		"value": 1
+	}, {
+		"text": "dil H2SO4 / 140°C ",
+		"value": 2
+	}, {
+		"text": "Con H2SO4 / 70°C",
+		"value": 3
+	}, {
+		"text": "Con H2SO4 / 170°C",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 85,
+	"type": 2,
+	"statement": "Which of the followings is correct? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "Acetophenone is an ether",
+		"value": 1
+	}, {
+		"text": "Diastase is an enzyme",
+		"value": 2
+	}, {
+		"text": "Cycloheptane is an aromatic compound",
+		"value": 3
+	}, {
+		"text": "All the above",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 86,
+	"type": 2,
+	"statement": "PVC polymer can be prepared by which of the monomer ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 4,
+	"choice": [{
+		"text": "CH3CH=CH2",
+		"value": 1
+	}, {
+		"text": "C6H5CH=CH2",
+		"value": 2
+	}, {
+		"text": "CH2=CH2",
+		"value": 3
+	}, {
+		"text": "CH2=CH–Cl",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 87,
+	"type": 2,
+	"statement": "Soft drinks and baby feeding bottles are generally made up of ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 1,
+	"choice": [{
+		"text": "polyester",
+		"value": 1
+	}, {
+		"text": "polyurethane",
+		"value": 2
+	}, {
+		"text": "polyurea",
+		"value": 3
+	}, {
+		"text": "polyamide",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 88,
+	"type": 2,
+	"statement": "The monomer of polystyrene is ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 3,
+	"choice": [{
+		"text": "C2H5 - CH = CH2",
+		"value": 1
+	}, {
+		"text": "CH2 = CHCl ",
+		"value": 2
+	}, {
+		"text": "C6H5 - CH = CH2",
+		"value": 3
+	}, {
+		"text": "CH2 = CHCHO",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 89,
+	"type": 2,
+	"statement": "Which one of the following is employed as Antihistamine? ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 3,
+	"choice": [{
+		"text": "Omeprazole",
+		"value": 1
+	}, {
+		"text": "Chloramphenicol",
+		"value": 2
+	}, {
+		"text": "Diphenhydramine",
+		"value": 3
+	}, {
+		"text": "Norethindrone",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 90,
+	"type": 2,
+	"statement": "Antioxidants are added to food: ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 4,
+	"choice": [{
+		"text": "To kill microbes",
+		"value": 1
+	}, {
+		"text": "As receptor",
+		"value": 2
+	}, {
+		"text": "As messenger",
+		"value": 3
+	}, {
+		"text": "For preservation",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 91,
+	"type": 2,
+	"statement": "Drugs that mimic the natural messenger by switching on the receptor are called: ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 3,
+	"choice": [{
+		"text": "Inhibitor",
+		"value": 1
+	}, {
+		"text": "Messenger",
+		"value": 2
+	}, {
+		"text": "Agonists",
+		"value": 3
+	}, {
+		"text": "Antagonists",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 92,
+	"type": 2,
+	"statement": "In DNA the complementary bases are: ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "adenine and guanine; thymine and cytosine",
+		"value": 1
+	}, {
+		"text": "adenine and thymine; guanine and cytosine",
+		"value": 2
+	}, {
+		"text": "uracil and adenine; cytosine and guanine",
+		"value": 3
+	}, {
+		"text": "adenine and thymine; guanine and uracil",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 93,
+	"type": 2,
+	"statement": "Haemoglobin is an example of: ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 1,
+	"choice": [{
+		"text": "Quaternary Structure of protein",
+		"value": 1
+	}, {
+		"text": "Tertiary Structure of protein",
+		"value": 2
+	}, {
+		"text": "Primary Structure of protein",
+		"value": 3
+	}, {
+		"text": "Seconary Structure of protein",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 94,
+	"type": 2,
+	"statement": "<span><img src=\"/images/question/q94.png\" /></span>",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "β – D – (-) – Fructofuranose",
+		"value": 1
+	}, {
+		"text": "α – D – (-) – Fructofuranose",
+		"value": 2
+	}, {
+		"text": "α – D – (+) – Glucopyranose",
+		"value": 3
+	}, {
+		"text": "β – D – (+) – Glucopyranose",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 95,
+	"type": 2,
+	"statement": "<span><img src=\"/images/question/q95.png\" /></span>",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "A",
+		"value": 1
+	}, {
+		"text": "B",
+		"value": 2
+	}, {
+		"text": "C",
+		"value": 3
+	}, {
+		"text": "D",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 96,
+	"type": 2,
+	"statement": "Decreasing order of reactivity of alkyl halide is: ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "RI > RCl > RBr",
+		"value": 1
+	}, {
+		"text": "RI > RBr > RCl",
+		"value": 2
+	}, {
+		"text": "RBr > RCl > RI",
+		"value": 3
+	}, {
+		"text": "RCl > RBr > RI",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 97,
+	"type": 2,
+	"statement": "Pick up the correct statement about alkyl halides. ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "They are associated with each other by H-bonds.",
+		"value": 1
+	}, {
+		"text": "They dissolve easily in organic solvents.",
+		"value": 2
+	}, {
+		"text": "They dissolve in water quickly.",
+		"value": 3
+	}, {
+		"text": "They do not contain any polar bond in their molecules",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 98,
+	"type": 2,
+	"statement": "Methyl cyanide on hydrolysis gives: ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 4,
+	"choice": [{
+		"text": "1,2-Benzenedicarboxylic acid",
+		"value": 1
+	}, {
+		"text": "Benzoic acid",
+		"value": 2
+	}, {
+		"text": "1,3-Benzenedicarboxylic acid",
+		"value": 3
+	}, {
+		"text": "Acetic acid",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 99,
+	"type": 2,
+	"statement": "Pyridine is less basic than triethylamine because: ",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 2,
+	"choice": [{
+		"text": "Pyridine has aromatic character",
+		"value": 1
+	}, {
+		"text": "Nitrogen in pyridine is sp2 hybridize(D)",
+		"value": 2
+	}, {
+		"text": "Pyridine has a cyclic system.",
+		"value": 3
+	}, {
+		"text": "Lone pair of nitrogen in pyridine is delocalize(D)",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 100,
+	"type": 2,
+	"statement": "<span><img src=\"/images/question/q100.png\" /></span>",
+	"correct_points": 1,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 1,
+	"answer": 1,
+	"choice": [{
+		"text": "4- bromoaniline",
+		"value": 1
+	}, {
+		"text": "3-bromoaniline",
+		"value": 2
+	}, {
+		"text": "Aniline",
+		"value": 3
+	}, {
+		"text": "o-bromoaniline",
+		"value": 4
+	}],
+	"additional_text": null
+}]

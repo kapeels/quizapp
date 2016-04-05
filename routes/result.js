@@ -1,6 +1,6 @@
 var mongoose = require( 'mongoose'),
-    Result = mongoose.model('Result'),
-    Response = mongoose.model('Response');
+    Response = mongoose.model('Response'),
+    Result = mongoose.model('Result');
 
 function generate_result( user_id, res, callback ) {
     var score = 0, section_wise_score = [ 0, 0, 0 ];

@@ -61,19 +61,19 @@
                     else if( question.type == 2 ) {
                         for( var i = 0; i < question.choice.length; i++ ) {
                             %>
-                            <div class="radio">
+                            <div class="radio choice">
                               <label>
                                 <input class="mcqoption" type="radio" <%= !answer_allowed ? 'disabled' : '' %> name="answer" id="answer" <%= question.choice[ i ].selected ? 'checked="true"' : '' %> value="<%= question.choice[ i ].value %>">
-                                <%- map[ i ] + ') ' %> 
+                                <%- map[ i ] + ') ' %>
                                 <%
                                 if( display_answer && question.choice[ i ].correct )  {
                                   %>
-                                  <span class="text-success answer"><strong><%= question.choice[ i ].text %></strong></span>
+                                  <span class="text-success answer"><strong><%- question.choice[ i ].text %></strong></span>
                                   <%
                                 }
                                 else {
                                   %>
-                                  <%= question.choice[ i ].text %>
+                                  <%- question.choice[ i ].text %>
                                   <%
                                 }
                                 %>
@@ -84,7 +84,7 @@
                         %>
                         <br />
                         <input type="hidden" name="cleared_response" id="cleared_response" value="false" />
-                        <input type="hidden" name="answer_submitted" id="answer_submitted" value="false" />                    
+                        <input type="hidden" name="answer_submitted" id="answer_submitted" value="false" />
                         <input type="hidden" name="mfr_value" id="mfr_value" value="<%= mfr_value ? 'true' : 'false' %>" />
                         <input type="hidden" name="mfr_clicked" id="mfr_clicked" value="false" />
                         <%
@@ -101,7 +101,7 @@
                             else {
                               %>
                               <button class="btn btn-default btn-mfr-true"><span class="glyphicon glyphicon-eye-open"></span> Mark for Review & Next</button>
-                              <%                              
+                              <%
                             }
                         }
                         if( answer_allowed && has_answered ) {
@@ -129,6 +129,12 @@
     </div>
 </div>
 <style type="text/css">
+.choice {
+  margin-bottom: 25px;
+}
+.answer img {
+  border: 2px solid;
+}
 .answer {
   font-weight: bolder;
   font-size: 18px;
@@ -149,8 +155,8 @@ $( document ).ready( function( ){
     }
   });
   $( ".mcqoption" ).click( function( ){
-    $( '#answer_submitted' ).val( 'true' );    
-  } ); 
+    $( '#answer_submitted' ).val( 'true' );
+  } );
   $( ".btn-mfr-true" ).click( function( ){
     $( '#mfr_clicked' ).val( 'true' );
     $( '#mfr_value' ).val( 'true' );
