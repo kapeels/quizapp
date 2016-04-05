@@ -64,7 +64,7 @@
                             <div class="radio choice">
                               <label>
                                 <input class="mcqoption" type="radio" <%= !answer_allowed ? 'disabled' : '' %> name="answer" id="answer" <%= question.choice[ i ].selected ? 'checked="true"' : '' %> value="<%= question.choice[ i ].value %>">
-                                <%- map[ i ] + ') ' %>
+                                <%- !is_maths ? map[ i ] + ') ' : '' %>
                                 <%
                                 if( display_answer && question.choice[ i ].correct )  {
                                   %>

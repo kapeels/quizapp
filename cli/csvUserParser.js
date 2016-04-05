@@ -41,27 +41,33 @@ function parseQuestionStatement( row ){
   return statement;
 }
 
+var last_row;
 // opts is optional
-index = 0;
+index = 100;
 csv()
-    .from.stream(fs.createReadStream('/Users/kapeel/temp/mhcet-stuff/pc.csv'))
+    .from.stream(fs.createReadStream('./maths.csv'))
     .transform( function(row){
         index++;
         console.log( 'attempting #' + index );
+        if( index < 126 ) {
+          last_row = row;
+          return;
+        }
       //  console.log(row);
         var question_object = {
           question_no: index,
           type: 2,
           statement: parseQuestionStatement( row ),
-          correct_points: 1,
+          correct_points: 2,
           incorrect_points: 0,
           multiple_responses: false,
-          section: parseInt(row[ 1 ]),
+          section: 2,
           answer: map[ row[ 6 ] ],
           choice: parseOptions( row ),
           additional_text: null
         };
         all_questions.push(question_object);
+        last_row = row;
         //row.unshift(row.pop());
         return row;
     })
