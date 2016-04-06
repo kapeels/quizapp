@@ -123,7 +123,7 @@ exports.show_question = function( req, res ) {
                 }
 
                 // shuffle answers if mcq!
-                if( question.type == '2' ) {
+                if( question.type == '2' && question.section != 2 ) {
                     question.choice = shuffle( question.choice );
                 }
                 return res.render( 'question_page',{
@@ -141,6 +141,7 @@ exports.show_question = function( req, res ) {
                     selected_option: selected_option,
                     response_type: response_type,
                     mfr_value: mfr_value,
+                    is_maths: question.section == 2,
                     map: [ 'a', 'b', 'c', 'd', 'e', 'f' ]
                 } );
             }

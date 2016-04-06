@@ -2298,4 +2298,1155 @@
 		"value": 4
 	}],
 	"additional_text": null
+},
+{
+	"question_no": 101,
+	"type": 2,
+	"statement": "The set of intelligent students in a class is ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 4,
+	"choice": [{
+		"text": "A null set",
+		"value": 1
+	}, {
+		"text": "A singleton set",
+		"value": 2
+	}, {
+		"text": "A finite set",
+		"value": 3
+	}, {
+		"text": "Not a well defined collection",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 102,
+	"type": 2,
+	"statement": "<span><img src='/images/maths/q2.png' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 3,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image005.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image007.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image009.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image011.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 103,
+	"type": 2,
+	"statement": "if <span><img src='/images/maths/q3.png' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 3,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image013.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image015.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image017.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image019.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 104,
+	"type": 2,
+	"statement": "The least positive integer an which will reduce  <span><img src='/images/maths/maths_25705_image021.gif' /></span>  to a real number , is ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 1,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image023.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image025.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image027.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image029.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 105,
+	"type": 2,
+	"statement": "If  <span><img src='/images/maths/maths_25705_image031.gif' /></span>    z   lies on ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 2,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image033.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image035.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image037.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image039.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 106,
+	"type": 2,
+	"statement": "The sequence   <span><img src='/images/maths/maths_25705_image041.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 3,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image043.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image045.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image047.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image049.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 107,
+	"type": 2,
+	"statement": "The roots of equation <span><img src='/images/maths/maths_25705_image051.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 4,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image053.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image055.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image057.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image059.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 108,
+	"type": 2,
+	"statement": "The number 7 digit integers , with sum of the digit equal to 10  and formed by using the digits 1,2 and 3 only, is ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 3,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image061.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image063.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image065.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image067.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 109,
+	"type": 2,
+	"statement": "The positive integers just greater than <span><img src='/images/maths/maths_25705_image069.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 4,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image071.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image073.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image075.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image077.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 110,
+	"type": 2,
+	"statement": "If  n is a positive integer, then <span><img src='/images/maths/maths_25705_image079.gif' /></span> is ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 4,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image081.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image084.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image085.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image087.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 111,
+	"type": 2,
+	"statement": "<span><img src='/images/maths/maths_25705_image089.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 3,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image091.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image093.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image095.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image097.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 112,
+	"type": 2,
+	"statement": "<span><img src='/images/maths/maths_25705_image099.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 4,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image101.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image103.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image105.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image107.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 113,
+	"type": 2,
+	"statement": "<span><img src='/images/maths/q13.png' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 4,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image112.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image114.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image116.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image118.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 114,
+	"type": 2,
+	"statement": "<span><img src='/images/maths/q14.png' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 4,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image120.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image122.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image124.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image126.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 115,
+	"type": 2,
+	"statement": "The value of   <span><img src='/images/maths/maths_25705_image128.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 3,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image130.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image132.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image134.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image138.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 116,
+	"type": 2,
+	"statement": "If <span><img src='/images/maths/maths_25705_image141.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 1,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image143.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image146.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/q16a3.png' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/q16a4.png' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 117,
+	"type": 2,
+	"statement": "If  <span><img src='/images/maths/maths_25705_image152.gif' /></span>  then the general value of   is ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 3,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image155.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image147.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/q17a3.png' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/q17a4.png' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+},{
+	"question_no": 118,
+	"type": 2,
+	"statement": "The period of the function <span><img src='/images/maths/maths_25705_image158.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 4,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image156.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image160.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image162.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image164.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 119,
+	"type": 2,
+	"statement": "<span><img src='/images/maths/maths_25705_image166.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 2,
+	"choice": [{
+		"text": "<span><img src='/images/maths/q19a1.png' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/q19a2.png' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/q19a3.png' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/q19a4.png' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 120,
+	"type": 2,
+	"statement": "The equation of line passing through point of intersection of lines  <span><img src='/images/maths/maths_25705_image170.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 3,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image172.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image175.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image178.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image180.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 121,
+	"type": 2,
+	"statement": "The area of the triangle formed by the lines x = 0 ,y = 0 and <span><img src='/images/maths/maths_25705_image182.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 2,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image184.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image176.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image186.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image188.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 122,
+	"type": 2,
+	"statement": "The angle between the pair of straight lines <span><img src='/images/maths/maths_25705_image190.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 1,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image192.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image194.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image196.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image198.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 123,
+	"type": 2,
+	"statement": "The equation of the circle touching x = 0, y = 0 and  x = 4  is ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 2,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image200.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image202.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image204.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image206.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 124,
+	"type": 2,
+	"statement": "The number of common tangent to the circle <span><img src='/images/maths/maths_25705_image208.gif' /></span>   is ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 4,
+	"choice": [{
+		"text": "<span><img src='/images/maths/q24a1.png' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/q24a2.png' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/q24a3.png' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/q24a4.png' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 125,
+	"type": 2,
+	"statement": "The two circle <span><img src='/images/maths/maths_25705_image212.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 2,
+	"choice": [{
+		"text": "<span><img src='/images/maths/q25a1.png' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/q25a2.png' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/q25a3.png' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/q25a4.png' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 126,
+	"type": 2,
+	"statement": "Equation   <span><img src='/images/maths/maths_25705_image216.gif' /></span>  represents ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 2,
+	"choice": [{
+		"text": "A)Parabola",
+		"value": 1
+	}, {
+		"text": "B)Ellipse,circle",
+		"value": 2
+	}, {
+		"text": "D)Circle of straight lines",
+		"value": 3
+	}, {
+		"text": "D)Pair of straight lines",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 127,
+	"type": 2,
+	"statement": "The line lx + m y + n = 0 will touch the parabola  <span><img src='/images/maths/maths_25705_image218.gif' /></span>  if ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 3,
+	"choice": [{
+		"text": "<span><img src='/images/maths/q27a1.png' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/q27a2.png' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/q27a3.png' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/q27a4.png' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 128,
+	"type": 2,
+	"statement": "<span><img src='/images/maths/maths_25705_image222.gif' /></span>  are the parametric equations ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 4,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image224.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image226.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image228.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image230.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 129,
+	"type": 2,
+	"statement": "The differential coefficient of  <span><img src='/images/maths/maths_25705_image232.gif' /></span> is ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 2,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image234.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image236.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image238.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image240.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 130,
+	"type": 2,
+	"statement": "If <span><img src='/images/maths/maths_25705_image242.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 1,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image244.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image246.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image248.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image250.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 131,
+	"type": 2,
+	"statement": "The graph of the function  <span><img src='/images/maths/maths_25705_image252.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 4,
+	"choice": [{
+		"text": "A straight line passing through (0, -sin<sup>2</sup>1) with slope 3",
+		"value": 1
+	}, {
+		"text": "A straight line passing through (0, 0)",
+		"value": 2
+	}, {
+		"text": "A parabola with vertex (1, -sin<sup>2</sup>)1)",
+		"value": 3
+	}, {
+		"text": "A straight line passing through point                          and parallel to the axis",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 132,
+	"type": 2,
+	"statement": "If   <span><img src='/images/maths/maths_25705_image264.gif' /></span>\n the interval in which  <span><img src='/images/maths/maths_25705_image265.gif' /></span>\n is increasing  is ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 2,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image268.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image270.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image272.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image256.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 133,
+	"type": 2,
+	"statement": "If  <span><img src='/images/maths/q33.png' /></span>\n      is Equal to: ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 4,
+	"choice": [{
+		"text": "-1",
+		"value": 1
+	}, {
+		"text": "0",
+		"value": 2
+	}, {
+		"text": "2",
+		"value": 3
+	}, {
+		"text": "1",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 134,
+	"type": 2,
+	"statement": "<span><img src='/images/maths/q34.png' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 2,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image274.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image276.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image278.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image280.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 135,
+	"type": 2,
+	"statement": "<span><img src='/images/maths/q35.png' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 2,
+	"choice": [{
+		"text": "1",
+		"value": 1
+	}, {
+		"text": "2",
+		"value": 2
+	}, {
+		"text": "0",
+		"value": 3
+	}, {
+		"text": "4",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 136,
+	"type": 2,
+	"statement": "The value of the integral <span><img src='/images/maths/q36.png' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 1,
+	"choice": [{
+		"text": "less than e and  greater than 1",
+		"value": 1
+	}, {
+		"text": "greater than e and  less than 1",
+		"value": 2
+	}, {
+		"text": "less than 1",
+		"value": 3
+	}, {
+		"text": "none of these",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 137,
+	"type": 2,
+	"statement": "<span><img src='/images/maths/q37.png' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 3,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image282.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/q37a2.png' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image288.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image291.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 138,
+	"type": 2,
+	"statement": "<span><img src='/images/maths/maths_25705_image293.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 3,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image295.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/q38a2.png' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image289.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image291.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 139,
+	"type": 2,
+	"statement": "<span><img src='/images/maths/maths_25705_image298.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 2,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image301.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image303.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image305.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image307.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 140,
+	"type": 2,
+	"statement": "<span><img src='/images/maths/maths_25705_image299.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 1,
+	"choice": [{
+		"text": "10",
+		"value": 1
+	}, {
+		"text": "8",
+		"value": 2
+	}, {
+		"text": "6",
+		"value": 3
+	}, {
+		"text": "4",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 141,
+	"type": 2,
+	"statement": "Equation of the curve passing through the points  (3,9) which satisfies the differential equation  <span><img src='/images/maths/maths_25705_image309.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 3,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image311.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image313.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image315.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image317.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 142,
+	"type": 2,
+	"statement": "If  y(t) is solution of <span><img src='/images/maths/maths_25705_image319.gif' /></span> , y(0)= -1 at t =1 the solution is ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 2,
+	"choice": [{
+		"text": "e + 1/2",
+		"value": 1
+	}, {
+		"text": "-1/2",
+		"value": 2
+	}, {
+		"text": "1/2",
+		"value": 3
+	}, {
+		"text": "e  -  �",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 143,
+	"type": 2,
+	"statement": "If G is the centroid of a triangle ABC, then                              equals ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 1,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image327.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image329.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image331.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image333.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 144,
+	"type": 2,
+	"statement": "If        <span><img src='/images/maths/maths_25705_image324.gif' /></span>\n   , then   <span><img src='/images/maths/maths_25705_image325.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 2,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image335.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image337.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image339.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image341.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 145,
+	"type": 2,
+	"statement": "If  a,b,c are unit vectors such that a + b + c=0, then the value of a.b  +b.c+c.a is ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 3,
+	"choice": [{
+		"text": "1",
+		"value": 1
+	}, {
+		"text": "3",
+		"value": 2
+	}, {
+		"text": "-3/2",
+		"value": 3
+	}, {
+		"text": "None of these",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 146,
+	"type": 2,
+	"statement": "If   <span><img src='/images/maths/maths_25705_image343.gif' /></span>  then ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 3,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image347.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image349.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image345.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image351.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 147,
+	"type": 2,
+	"statement": "The probability of  getting heads in both trials , when a balanced coin is tossed twice, will be ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 1,
+	"choice": [{
+		"text": "1/4",
+		"value": 1
+	}, {
+		"text": "1/2",
+		"value": 2
+	}, {
+		"text": "1",
+		"value": 3
+	}, {
+		"text": "3/4",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 148,
+	"type": 2,
+	"statement": "If  A and B are arbitrary events  then ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 1,
+	"choice": [{
+		"text": "<span><img src='/images/maths/maths_25705_image356.gif' /></span>",
+		"value": 1
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image357.gif' /></span>",
+		"value": 2
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image353.gif' /></span>",
+		"value": 3
+	}, {
+		"text": "<span><img src='/images/maths/maths_25705_image359.gif' /></span>",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 149,
+	"type": 2,
+	"statement": "The approximate e value of  (7.995)<sup>1/3</sup>  correct to four decimal places is ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 2,
+	"choice": [{
+		"text": "1.9995",
+		"value": 1
+	}, {
+		"text": "1.9996",
+		"value": 2
+	}, {
+		"text": "1.999",
+		"value": 3
+	}, {
+		"text": "1.9991",
+		"value": 4
+	}],
+	"additional_text": null
+}, {
+	"question_no": 150,
+	"type": 2,
+	"statement": "If  <span><img src='/images/maths/maths_25705_image361.gif' /></span> ",
+	"correct_points": 2,
+	"incorrect_points": 0,
+	"multiple_responses": false,
+	"section": 2,
+	"answer": 3,
+	"choice": [{
+		"text": "1",
+		"value": 1
+	}, {
+		"text": "3",
+		"value": 2
+	}, {
+		"text": "4",
+		"value": 3
+	}, {
+		"text": "0",
+		"value": 4
+	}],
+	"additional_text": null
 }]
