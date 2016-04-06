@@ -38,6 +38,9 @@ exports.show_page = function( req, res ){
                 if( !commons.is_under_time_limit( req.session.sa ) ) {
                     can_solve = false;
                 }
+                if( req.session.is_completed ) {
+                  can_solve = false;
+                }
             }
             res.render( 'questions', {
                 title: commons.quiz_name + ' | Play!',
