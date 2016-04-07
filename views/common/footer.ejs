@@ -1,12 +1,6 @@
                         </div>
                     </div>
-                </div>
-                <div class="col-md-2">
-                    <!--<h3 class="text-center">Sponsors</h3><br /><br />-->
-                    <!--<a href="#" target="_blank">
-                        <img src="http://placehold.it/200x150" width="200" />
-                    </a>-->
-                </div>
+                </div>              
             </div>
         </div>
     </div>
@@ -27,7 +21,7 @@
             }
             else if( ends_in < 0 ) {
                 $( "#time_left" ).html( 'N/A (Exam is over)' );
-            } 
+            }
             else {
                 $('#time_left').countdown( new Date().getTime() + ends_in, function(event) {
                     $(this).html(event.strftime('%H:%M:%S'));

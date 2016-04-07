@@ -2,6 +2,7 @@
 <div class="row-fluid">
     <div class="col-md-12">
         <h3>Result for <%= user_name %></h3>
+
         <br />
         <h3>Score: <strong><%= result.score %></strong></h3>
         <div class="row-fluid">
@@ -21,10 +22,10 @@
                     <tr>
                         <td><strong>Total</strong></td>
                         <td><strong><%= result.score %></strong></td>
-                    </tr>          
+                    </tr>
                 </table>
-                <canvas id="score_chart" width="250" style="margin: 0 auto;"></canvas>
-                <h5 class="text-center">Pie chart for score</h5>
+                <!--<canvas id="score_chart" width="250" style="margin: 0 auto;"></canvas>
+                <h5 class="text-center">Pie chart for score</h5>-->
             </div>
             <div class="col-md-8">
                 <h4>Analysis</h4>
@@ -34,10 +35,10 @@
                             <%
                             for( var i = 0; i < sections.length; i++ ) {
                                 %>
-                                <th><%= sections[ i ].name %></th>                                    
+                                <th><%= sections[ i ].name %></th>
                                 <%
                             }
-                            %>                           
+                            %>
                         </tr>
                     </thead>
                     <tbody>
@@ -60,12 +61,12 @@
                                             <td><%= result.section_wise_analysis[ i ].incorrect %></td>
                                         </tr>
                                     </table>
-                                </td>                                    
+                                </td>
                                 <%
                             }
-                            %>                            
-                        </tr>                        
-                    </tbody>                    
+                            %>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -73,10 +74,10 @@
 </div>
 <div class="row-fluid">
     <div class="col-md-6 col-md-offset-3">
-
+      <a class="btn btn-sm btn-primary pull-right" href="/logout">Log Out</a>
     </div>
 </div>
-<script src="components/Chart.js/Chart.js"></script>
+<!--<script src="components/Chart.js/Chart.js"></script>
 <script type="text/javascript">
 var data = [
     {
@@ -100,7 +101,7 @@ var data = [
 ];
 var ctx = document.getElementById("score_chart").getContext("2d");
 var myPieChart = new Chart( ctx ).Pie( data );
-</script>
+</script>-->
 <style type="text/css">
 table.scores tr td:nth-child(1), table.analysis tr td:nth-child(1) {
     text-align: right;

@@ -33,8 +33,8 @@ commons.menu = [
     { label: 'Submit Exam', glyph: 'stop', path: '/submit',
         show: { logged_in: true, logged_out: false, remote: true, local: true } },
 
-    { label: 'Log Out', glyph: 'log-out', path: '/logout',
-        show: { logged_in: true, logged_out: false, remote: true, local: true } },
+  /*  { label: 'Log Out', glyph: 'log-out', path: '/logout',
+        show: { logged_in: true, logged_out: false, remote: true, local: true } },*/
 
     { label: 'Scoreboard', glyph: 'list-alt', path: '/scoreboard',
         show: { logged_in: true, logged_out: true, remote: true, local: false } },

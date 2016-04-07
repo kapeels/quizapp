@@ -70,7 +70,7 @@
                           %>
                           <a onclick="return confirm('WARNING: You cannot undo this action. \n\n Click OK to SUBMIT YOUR TEST or Cancel to go back.');" href="<%- menu[ i ].path %>"><span class="glyphicon glyphicon-<%- menu[ i ].glyph %>"></span> <%- menu[ i ].label %></a>
                           <%
-                        }         
+                        }
                         else {
                           if( menu[ i ].path === '/start' ) {
                             if( !can_start ) {
@@ -104,7 +104,7 @@
       <!-- Begin page content -->
       <div class="container">
         <div class="row-fluid">
-          <div class="col-md-10">
+          <div class="col-md-12">
               <%
               if( typeof alert != 'undefined' ) {
                 %>
