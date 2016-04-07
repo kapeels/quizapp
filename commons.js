@@ -43,7 +43,7 @@ commons.menu = [
         show: { logged_in: true, logged_out: true, remote: true, local: false } }
 ];
 
-commons.quiz_duration = 10; // in minutes
+commons.quiz_duration = 30; // in minutes
 // year, month = 0 for jan and 11 for dec, day, hours, minutes, seconds
 commons.quiz_starts_at = new Date( 2015, 2 , 12, 11, 0 ).getTime();
 //commons.quiz_starts_at = new Date( 2015, 1 , 26, 10, 30 ).getTime();
